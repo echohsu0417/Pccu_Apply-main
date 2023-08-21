@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統-&#x5E33;&#x865F;&#x7BA1;&#x7406;</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body id="">
+    <!-- 直接跳主內容區 -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+ <!-- <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a> -->
+                <h1>
+                    <a href="index.htm"><img src="/images/logo.png" alt="&#x5E33;&#x865F;&#x7BA1;&#x7406;" /></a>
+                </h1>
+                <a href="https://incubator.moeasmea.gov.tw/" class="back">返回創育加速卓越服務網</a>
+                <p class="user">您好，jj.james.hsu@gmail.com  <a href="/Home/Logout">&#x767B;&#x51FA;</a></p>  <!-- noscript -->
+                <!-- <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript> -->  <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/Apply/AccountEdit">&#x5E33;&#x865F;&#x7BA1;&#x7406;</a></li>
+                        <li><a href="/Apply/ProjectList">&#x8A08;&#x756B;&#x6E05;&#x55AE;</a></li>
+                    </ul>
+                </nav>  <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <!--< div id = "center" class="main innerpage">-->
+<!-- 內頁新增一個classname-->
+<!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+<div id="center" class="main innerpage">
+    <div class="container">
+        <h2 class="title">會員帳號管理</h2>
+
+        <!-- SP Start -->
+        <section class="sp">
+            <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+            <form method="post" class="form_grid" action="/Apply/AccountEdit">
+                <div class="form_grp">
+                    <input name="UserName" type="hidden" value="James">
+                    <legend class="form_title">會員帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></legend>
+                    <div class="form_content">
+                        James
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">單位名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="form_content form_inline">
+                        <input value="Hyweb" type="text" data-val="true" data-val-length="The field OrganizationName must be a string with a maximum length of 180." data-val-length-max="180" data-val-required="&#x8ACB;&#x8F38;&#x5165;&#x7533;&#x8ACB;&#x55AE;&#x4F4D;&#x540D;&#x7A31;" id="OrganizationName" maxlength="180" name="OrganizationName" placeholder="&#x8ACB;&#x8F38;&#x5165;&#x7533;&#x8ACB;&#x55AE;&#x4F4D;&#x540D;&#x7A31;" />
+                        <!--<input name="" type="text" value="Hyweb" placeholder="請輸入申請單位全名">-->
+                        <!--input name="" type="text" value="已經輸入的內容用value" readonly-->
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">登入密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <!--新增帳號時密碼為必填，編修帳號時則需勾選變更才出現-->
+                    <script>
+                        function pwFunction() {
+                          var x = document.getElementById("pwDIV");
+                          if (x.style.display === "none") {
+                            x.style.display = "block";
+                          } else {
+                            x.style.display = "none";
+                          }
+                        }
+                        </script>
+                    <div class="form_content form_inline">
+                        <label>
+                            <input type="checkbox" id="PasswordChangeChecked" name="PasswordChangeChecked" value=""  onchange="pwFunction()" onclick="checkPasswordInput()">重設密碼
+                        </label>
+                        <div id="pwDIV" style="display: none;">
+                            <div>
+                                <input onkeyup="passwordChanged();" disabled type="password" data-val="true" data-val-length="&#x5BC6;&#x78BC;&#x9577;&#x5EA6;&#x81F3;&#x5C11;&#x3000;6." data-val-length-max="30" data-val-length-min="6" data-val-required="&#x8ACB;&#x8F38;&#x5165;&#x5BC6;&#x78BC;" id="UserPassword" maxlength="30" name="UserPassword" placeholder="&#x8ACB;&#x8F38;&#x5165;&#x5BC6;&#x78BC;" />
+                            </div>
+                            <div id="passwordUpcase" class="notic uncheck">包含英文字母大寫</div>
+                            <div id="passwordLowcase" class="notic uncheck">包含英文字母小寫</div>
+                            <div id="passwordDigit" class="notic uncheck">至少包含 1 個數字</div>
+                            <div id="passwordSymbol" class="notic uncheck">至少包含 1 個符號 .#%$^&*!_@+-</div>
+                            <div id="passwordLength" class="notic uncheck">長度至少 6 個字元 </div>
+                            <div>
+                                <input onkeyup="passwordChanged();" disabled type="password" data-val="true" data-val-equalto="&#x5BC6;&#x78BC;&#x8F38;&#x5165;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x8ACB;&#x91CD;&#x65B0;&#x8F38;&#x5165;" data-val-equalto-other="*.UserPassword" data-val-length="The field ConfirmPassword must be a string with a maximum length of 30." data-val-length-max="30" id="ConfirmPassword" maxlength="30" name="ConfirmPassword" placeholder="&#x8ACB;&#x8F38;&#x5165;&#x5BC6;&#x78BC;" />
+                            </div>
+                            <span class="notic field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">聯絡email</label>
+                    <div class="form_content form_inline">
+                        <input value="jj.james.hsu@gmail.com" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-length="The field Email must be a string with a maximum length of 128." data-val-length-max="128" data-val-required="&#x8ACB;&#x8F38;&#x5165;&#x4E3B;&#x8981;&#x806F;&#x7D61;&#x4EBA;email" id="Email" maxlength="128" name="Email" placeholder="&#x8ACB;&#x8F38;&#x5165;&#x4E3B;&#x8981;&#x806F;&#x7D61;&#x4EBA;email" />
+                        <div class="notic">此email將作為通知信發送收件信箱</div>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">聯絡人姓名</label>
+                    <div class="form_content form_inline">
+                        <input value="James Hsu" type="text" data-val="true" data-val-length="The field AccountName must be a string with a maximum length of 60." data-val-length-max="60" data-val-required="&#x8ACB;&#x8F38;&#x5165;&#x4E3B;&#x8981;&#x806F;&#x7D61;&#x4EBA;&#x59D3;&#x540D;" id="AccountName" maxlength="60" name="AccountName" placeholder="&#x8ACB;&#x8F38;&#x5165;&#x4E3B;&#x8981;&#x806F;&#x7D61;&#x4EBA;&#x59D3;&#x540D;" />
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="reset" class="btn btn-reset" value="清除重填" />
+                    <input type="submit"" class="btn btn-submit" value="儲存變更">
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LGvjygCnutCgLzi5ufZ66lIAzjPDQ4cXadKdBVdRbDGB961bK4C54axg8McJbnOaTfDJyPyb2KCEo9ef2E88DqrN3a3DokhVKjw5dACsNHUFx4YC4kVy9qJeO4IShGu3K8jgCufPFGndbRMqrkhU4T3vY6bw0PgGG9m9nF3ZetuoXvEt8wkRjSNLjf_qr3jew" /></form>
+        </section>
+        <!-- SP End -->
+    </div>
+</div>
+
+
+        <!-- main End -->
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+ <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <!-- <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a> -->
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                </h1>
+                <a href="#" class="back">返回創育加速卓越服務網</a>
+                <p class="user">您好，liucc910hyweb@gmail.com<a href="">登出</a></p>
+                <!-- noscript -->
+                <!-- <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript> -->
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">帳號管理</a></li>
+                        <li><a href="#">計畫清單</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
+            <!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+            <div class="container">
+                <h2 class="title">申請計畫</h2>
+                <!-- 計畫編號 -->
+                <div class="project">
+                    <ul>
+                        <li><b>系統編號：</b>送出申請後由系統產生</li>
+                        <li><b>計畫名稱：</b>113年度中小企業創育機構發展補助計畫(延續)</li>
+                    </ul>
+                </div>
+                <!-- step -->
+                <div class="steps">
+                    <ul>
+                        <!--目前步驟是Now，已完成步驟是Pass-->
+                        <!--li class="Pass"></li>
+                        <li class="Now"></li>
+                        <li></li-->
+
+                        <li class="Now">
+                            <span></span>
+                            <p>申請類別</p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>申請資料填寫</p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>送出申請</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SP Start -->
+                <section class="sp">
+                    <h3>申請基本資料</h3>
+                    <form method="post" class="form_grid" id="AddProject2" action="/Apply/AddProject2">
+                        <input name="ProjectYear" type="hidden" value="113">
+                        <input name="ProjectName" type="hidden" value="113年度中小企業創育機構發展補助計畫">
+                        <div class="form_grp">
+                            <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫模組</label>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                            <label><input type="radio" name="PlanTypeCode" value="T07" checked="" onclick="checkOrganizationType(this.value); setApplyProjectName(this.value, 113, '年度「在地青年創育坊」補助計畫', '年度中小企業創育機構發展補助計畫');">產業加速器</label>                                     <label><input type="radio" name="PlanTypeCode" value="T06" onclick="checkOrganizationType(this.value); setApplyProjectName(this.value, 113, '年度「在地青年創育坊」補助計畫', '年度中小企業創育機構發展補助計畫');">企業加速器</label>                                     <label><input type="radio" name="PlanTypeCode" value="T05" onclick="checkOrganizationType(this.value); setApplyProjectName(this.value, 113, '年度「在地青年創育坊」補助計畫', '年度中小企業創育機構發展補助計畫');">在地青年創育坊</label>                         </div>
+                                <!--青創坊擴充子模組，點選青創坊後才出現-->
+                                <div id="PlansubtypeT05" style="display:none" class="radio_grp form_inline diving">
+                                    <label><input type="radio" name="PlanSubtypeCode" value="A" checked="">標竿組</label>
+                                    <label><input type="radio" name="PlanSubtypeCode" value="B">新銳組</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請類型</label>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input type="radio" name="OrganizationType" value="C" checked="">公司</label>
+                                    <label><input type="radio" name="OrganizationType" value="O" onclick="checkFeatures('N');" disabled="">法人</label>
+                                    <label><input type="radio" name="OrganizationType" value="S" onclick="checkFeatures('N');" disabled="">學校</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--申請方式與區域皆非必填-->
+                        <div class="form_grp">
+                            <label class="form_title">是否採聯盟申請</label>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input id="ApplyTypeI" type="radio" name="ApplyType" value="I" checked="">個別申請</label>
+                                    <label><input id="ApplyTypeU" type="radio" name="ApplyType" value="U">聯合申請</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_grp" id="AssistantOrganizationSection" style="display: block;">
+                            <label class="form_title">是否採協作申請</label>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input type="radio" name="HasAssistantOrg" value="N" onclick="hasAssistantClick('N');">否</label>
+                                    <label><input type="radio" name="HasAssistantOrg" value="Y" onclick="hasAssistantClick('Y');" checked="">是</label>
+                                    <!--非企業加速器不允許選擇-->
+                                </div>
+                                <!--企業加速器才出現-->
+                                <div class="radio_grp form_inline diving" id="SetAssistantOrgSection" style="display: block;">
+                                    <label><input type="radio" name="assistantOrganizationType" value="C" checked="">公司</label>
+                                    <label><input type="radio" name="assistantOrganizationType" value="O">法人</label>
+                                    <label><input type="radio" name="assistantOrganizationType" value="S">學校</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--8/1 新增申請特色加值項目-物聯網設定，需判斷第二步加值經費是否需填寫，預設否-->
+                        <div class="form_grp" style="display:none">
+                            <label class="form_title">申請特色加值項目-物聯網</label>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input type="radio" name="Featured" value="N" checked="">否</label>
+                                    <label><input type="radio" name="Featured" value="Y" disabled="">是</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <input type="button" class="btn btn-primary" value="繼續填寫" onclick="addProjectFormSubmit('Save');">
+                            <input type="button" class="btn btn-normal" value="放棄" onclick="addProjectFormSubmit('Cancel');">
+                        </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KVcV7v8GW5DimYL9AGnEugZeHb_ohMTU6zt-dPkYngCxScYzoogZ4ZkFSlFj_ppho9vwOQ5Rjsz_G3Ruf6CD_FoXeqf5DyIB9Fgbemdnmi_zOrg3_9xBoePybix8OeJVCEdGrl8ScX2gLfXqVZShfn2aVDPicHcNIaLOVtsAZN5pDuwh2JvqZh0eCGkzZ5i_w"></form>
+                    <div class="notice_info">請注意，每一公司帳號每年度只能送出一筆申請計畫。請務必確認清楚後再送出申請計畫。</div>
+                </section>
+                <!-- SP End -->
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+</html>

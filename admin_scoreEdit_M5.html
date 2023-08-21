@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <!-- <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="創育加速管理端" /></a>
+                </h1>
+                <!--a href="#" class="back">返回創育加速卓越服務網</a-->
+                <p class="user">您好，liucc@hyweb.com.tw<a href="">登出</a></p>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <!--li><a href="#">案件審核</a>
+                            <ul>
+                                <li><a href="#">案件初審</a></li>
+                                <第二層選單．不具權限者不可見-->
+                                <!--li><a href="#">案件管理</a></li>
+                                <li><a href="#">申請人管理</a></li>
+                            </ul>
+                        </li-->
+                        <!--評審委員功能-->
+                        <li><a href="#">線上審核</a></li>
+                        <!--li><a href="#">系統管理</a>
+                            <ul>
+                                <li><a href="#">管理端帳號管理</a></li>
+                                <li><a href="#">審核委員資料庫</a></li>
+                            </ul>
+                        </li-->
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage Manage">
+            <!-- 內頁新增一個classname-->
+            <!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+            <div class="container">
+                <h2 class="title">線上評分</h2>
+                
+                <!-- filter box -->
+                <!-- 1 -->
+                <div class="filter_box">
+                    <h3 class="title opened">申請基本資訊</h3>
+                    <section>
+                        <table class="scroltable">
+                            <tr>
+                                <th>案號</th>
+                                <td>10901A030</td>
+                                <th>計畫類型</th>
+                                <td>在地青年創育坊｜標竿組</td>
+                            </tr>
+                            <tr>
+                                <th>聯盟申請</th>
+                                <td>個別申請</td>
+                                <th>申請特色加值項目-物聯網</th>
+                                <td>否</td>
+                            </tr>
+                            <tr>
+                                <th>轉組意願</th>
+                                <td>是<br>(如標竿組補助案數額度已滿，是否同意由委員決議轉入新銳組)</td>
+                                <th>投入縣市</th>
+                                <td>六都：臺北市</td>
+                            </tr>
+                            <tr>
+                                <th>單位名稱</th>
+                                <td colspan="3">凌網科技股份有限公司</td>
+                            </tr>
+                            <tr>
+                                <th>第一年計畫經費計畫經費</th>
+                                <td colspan="3">
+                                    <section class="funds">
+                                        <div>
+                                            <p><b>政府補(捐)助款：</b></p>
+                                            <p class="value">2,000,000</p>
+                                        </div>
+                                        <div>
+                                            <p><b>自籌款：</b></p>
+                                            <p class="value">2,500,000</p>
+                                        </div>
+                                        <div>
+                                            <p><b>第一年總經費：</b></p>
+                                            <p class="value">4,500,000</p>
+                                        </div>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>第二年計畫經費計畫經費</th>
+                                <td colspan="3">
+                                    <section class="funds">
+                                        <div>
+                                            <p><b>政府補(捐)助款：</b></p>
+                                            <p class="value">2,000,000</p>
+                                        </div>
+                                        <div>
+                                            <p><b>自籌款：</b></p>
+                                            <p class="value">2,500,000</p>
+                                        </div>
+                                        <div>
+                                            <p><b>第二年總經費：</b></p>
+                                            <p class="value">4,500,000</p>
+                                        </div>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>計畫總經費</th>
+                                <td colspan="3">
+                                    <section class="funds">
+                                        <div>
+                                            <p><b>第一年+第二年之計畫總經費合計：</b></p>
+                                            <p class="value">9,000,000</p>
+                                        </div>
+                                    </section>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>計畫摘要</th>
+                                <td colspan="3">
+                                    <textarea name="" id="" cols="30" rows="20" placeholder="" readonly="">臺灣第一個以水平式(HUB)整合政府創業資源計畫資訊為主，快速普及至全國，藉此鏈結不同地方創業社群。從中央部會到地方政府、從政府到民間、持續性串流彼此需求與能量，活絡台灣創業生態圈發展。同時辦理創業相關活動，協助從0到1階段創業者起步發展，打造創業第一站，歡迎任何想創業、新創團隊與企業及創業社群來基地交流。
+                                        文化部（以下簡稱「本部」）為協助設置文化創意聚落，輔導藝文產業核心創作及獨立工作者進駐，透過群聚效益，以促進文化創意事業發展，特訂定「文化部輔導藝文產業創新育成補助作業要點」（以下簡稱「本要點」）。
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>案件附檔</th>
+                                <td colspan="3">
+                                    <ul class="annex">
+                                        <li>工作進度表：<a href="javascript:void(0)" onclick="window.open('admin_scoreEdit_Viewfile.html', '檢視工作進度表', config='height=750px,width=930px,toolbar=no,left=100px,top=100px');">二年度工作進度表</a></li>
+                                        <li>計畫申請書：<a href="#">計畫申請書</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>申請年度｜申請日期</th>
+                                <td>110年｜2020/4/28 16:31</td>
+                                <th>狀態</th>
+                                <td>資格審通過</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+
+                <!-- 2 -->
+                <div class="filter_box">
+                    <h3 class="title opened">線上評分</h3>
+                    <section>
+                        <!-- <caption>審查項目及內容</caption> -->
+                        <h4 class="title">審查項目及內容</h4>      
+                        <table class="">
+                            <tr>
+                                <th>營運模式及組織資源(40%)</th>
+                                <td colspan="3">
+                                    <ol class="annex">
+                                        <li>在地青年創育坊之推動機制；申請單位自主營運、獲利模式及情形。</li>
+                                        <li>是否具備鏈結地方能力之在地團隊及其專業度、可供協助在地青年創新創業資源與服務(包含空間、技術、課程、業師、資金、市場…等)。</li>
+                                        <li>在地青年創育坊之社會參與度及社會影響力。</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>輔導機制及在地連結(40%)</th>
+                                <td colspan="3">
+                                    <ol class="annex">
+                                        <li>聚焦(定向)在地產業為何；申請單位就該產業與在地發展問題、創新缺口及資源掌握度。</li>
+                                        <li>針對投入在地區域提出差異化創業條件、適合創業主題分析，以及如何招募適合的創業青年、團隊或新創企業之作法及輔導機制。</li>
+                                        <li>導入創新科技應用解決在地問題、在地產業轉型升級之作法。</li>
+                                        <li>其他在地發展所需之加值服務。</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>過往實績及預期效益(20%)</th>
+                                <td colspan="3">
+                                    <ol class="annex">
+                                        <li>輔導青年返鄉、留鄉創業之實績。</li>
+                                        <li>績效目標設定完整度。</li>
+                                        <li>前一年度執行本計畫成果績效(無則免填)。</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>加分項目(協助在地新增/維持就業人數)(0~2分)</th>
+                                <td colspan="3">
+                                    <p>設定「協助在地新增/維持就業人數」之自設指標者。</p>
+                                </td>
+                            </tr>
+                       </table>
+                        <!--  -->
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <label for="" class="form_title">合計總分</label>
+                                <div class="form_content">
+                                    <div class="form_content form_inline mix-float-col">
+                                            <div class="form_grp">
+                                            <label>評分項目小計</label>
+                                            <input name="" type="text"" value="" placeholder="0~100" min="0" max="100"><span>分</span>
+                                            </div><br>
+                                            <div class="form_grp">
+                                                <label>加分項目(六大核心)</label>
+                                                <input name="" type="text" value="0" placeholder="0~3" min="0" max="3" readonly><span>分</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label>加分項目(進駐林口/沙崙新創園)</label>
+                                                <select name="" id="" disabled="disabled">
+                                                    <option value="">0</option>
+                                                    <option value="">2</option>
+                                                    <option value="">5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label>加分項目(協助在地新增/維持就業人數)</label>
+                                                <input name="" type="text" value="0" placeholder="0~2" min="0" max="2"><span>分</span>
+                                            </div>
+                                            <div class="notic">評分項目給分需介於0~100分之間<br>
+                                            加分項目(六大核心)給分需介於0~3之間<br>
+                                            加分項目(進駐林口/沙崙新創園)給分可填:0、2、5分<br>
+                                            加分項目(協助在地新增/維持就業人數之自設指標者)給分可介於0-2之間。
+                                            </div>
+                                   </div>
+                                   <div class="form_content form_inline mix-float-col">
+                                        <div class="form_grp">
+                                            <label>自動加總得分</label>
+                                        <input name="username" type="text" value="" placeholder="自動加總" readonly><span>分</span>
+                                        </div>
+                                   <div class="notice_info">1. 評分項目給分請依上方評審項目與比重進行評分，總分0-100分，總分70(含)分以上為推薦<br>
+                                    2. 經審核創育輔導能量(擇定之聚焦產業領域)符合「國家發展計畫」六大核心戰略產業者，可酌予加分。加分項目請見申請計畫書之六大核心項目，如認為無加分項目請填0分，如認為有加分項目請填1-3分。<br>
+                                    3. 針對有意願進駐林口/沙崙新創園，或已進駐但未獲「國際創業聚落示範計畫-國際加速器」補助之創育機構，將酌予加分。加分項目請見申請計畫書之進駐項目，如認為無加分項目請填0分，如認為有林口新創園加2分/沙崙新創園加5分。<br>
+                                    4. 在地青年創育坊模組，若有「協助在地新增/維持就業人數」之自設指標者，可加分介於0-2之間。
+                                   </div>
+                                   </div>
+
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">建議複審方式</label>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <label><input type="radio" name="sampleRadio6" value="" checked="">實地訪查</label>
+                                        <label><input type="radio" name="sampleRadio6" value="" disabled>簡報審查</label><!--在地青年模組不可選簡報審查-->
+                                    </div>
+                                   <div class="notice_info">如有超過1/2委員評分未達70分者，該案不予推薦進入複審</div><!--僅調整文案，判斷條件不用改-->
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">審核意見</label>
+                                <div class="form_content">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                                    <div class="notice_info">審查意見請具體明確；針對不推薦進入複審者，請提供明確理由及待改進事項。</div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="btn_grp">
+                            <input type="button" class="btn btn-normal" value="暫存草稿">
+                            <input type="button" class="btn btn-primary" value="確定評分">
+                            <input type="button" class="btn btn-secondary" value="取消">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

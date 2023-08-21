@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!--分派評審委員跳窗-->
+    <div id="modal1" class="modal">
+        <form action="" class="form_grid">
+            <div class="form_grp">
+                <div class="form_content mix-3-col">
+                    <div class="form_grp">
+                        <label for="username">專業領域：</label>
+                        <input name="username" type="text" placeholder="請輸入專業領域關鍵字">
+                    </div>
+                    <div class="form_grp">
+                        <label for="username">身分別：</label>
+                        <select name="" id="">
+                            <option value="">請選擇</option>
+                            <option value="">產業</option>
+                            <option value="">政府</option>
+                            <option value="">學界</option>
+                            <option value="">法人及研究單位</option>
+                        </select>
+                    </div>
+                    <div class="form_grp">
+                        <label for="username">委員名稱：</label>
+                        <input name="username" type="text" placeholder="請輸入委員姓名關鍵字">
+                    </div>
+                </div>
+            </div>
+            <div class="btn_grp">
+                <!-- <button class="btn btn-reset" type="">放棄</button>
+                <button class="btn btn-submit" type="">暫存草稿</button> -->
+                <input type="button" class="btn btn-primary" value="搜尋">
+            </div>
+        </form>
+        <section>
+            <h2>搜尋結果</h2>
+            <table>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>委員姓名</th>
+                    <th>職稱</th>
+                    <th>單位</th>
+                    <th>身分別</th>
+                    <th>專長領域</th>
+                    <th>負責審核</th>
+                </tr>
+            </table>
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="加入↓">
+                <!--input type="button" class="btn btn-secondary" value="移除"-->
+            </div>
+        </section>
+        <form>
+        <section>
+            <h2>已選入清單<span>0</span></h2>
+            <table>
+                <tr>
+                    <th>委員姓名</th>
+                    <th>職稱</th>
+                    <th>單位</th>
+                    <th>身分別</th>
+                    <th>專長領域</th>
+                    <th>負責審核</th>
+                    <th>移除</th>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>設定評審期限</h2>
+            <div class="datepick">
+                  <input name="" type="date" value="" class="calendar" autocomplete="off">
+            </div>
+            
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="確定選擇">
+                <input type="button" class="btn btn-secondary" value="取消">
+            </div>
+        </section>
+        </form>
+    </div>
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="創育加速管理端" /></a>
+                </h1>
+                <!--a href="#" class="back">返回創育加速卓越服務網</a-->
+                <p class="user">您好，liucc@hyweb.com.tw<a href="">登出</a></p>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">案件管理</a>
+                            <ul>
+                                <li><a href="#">案件資格審</a></li>
+                                <!--第二層選單．不具權限者不可見-->
+                                <!--li><a href="#">案件管理</a></li>
+                                <li><a href="#">申請人管理</a></li-->
+                            </ul>
+                        </li>
+                        <!--評審委員功能-->
+                        <!--li><a href="#">線上審核</a></li-->
+                        <li><a href="#">系統管理</a>
+                            <ul>
+                                <!--li><a href="#">管理端帳號管理</a></li>
+                                <li><a href="#">審核委員資料庫</a></li-->
+                                <li><a href="#">個人帳號管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage Manage">
+            <!-- 內頁新增一個classname-->
+            <div class="container">
+                <h2 class="title">案件資格審</h2>
+                
+                <!-- filter box -->
+                <div class="filter_box">
+                    <h3 class="title">條件搜尋</h3>
+                    <section>
+                        <form action="" class="form_grid form_inline mix-3-col">
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">類別：</label>
+                                    <select name="" id="">
+                                        <option value="">請選擇</option>
+                                        <option value="">主題式國際創育加速器</option>
+                                        <option value="">國際創育加速器</option>
+                                        <option value="">國際創育加速器</option>
+                                        <option value="">在地企業創新器</option>
+                                        <option value="">企業加速器</option>
+                                        <option value="">在地青年創育坊</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">申請公司：</label>
+                                    <input name="username" type="text" placeholder="公司名稱">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">申請者縣市：</label>
+                                    <select name="" id="">
+                                        <option value="">請選擇</option>
+                                        <option value="">台北市</option>
+                                        <option value="">新北市</option>
+                                        <option value="">桃園縣</option>
+                                        <option value="">新竹縣</option>
+                                        <option value="">苗栗縣</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content combine">
+                                    <label for="username">年度：</label>
+                                    <select name="" id="" style="width:40%;display:inline-block;">
+                                        <option value="">110</option>
+                                        <option value="">111</option>
+                                        <!--option value="">112</option-->
+                                    </select>
+                                    <select name="" id="" style="width:58%;display:inline-block;">
+                                        <option value="">新增計畫</option>
+                                        <option value="">延續計畫</option>
+                                        <!--option value="">112</option-->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">系統編號：</label>
+                                    <input name="username" type="text" placeholder="請輸入完整案號">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">申請者帳號：</label>
+                                    <input name="username" type="text" placeholder="請輸入會員帳號">
+                                </div>
+                            </div>
+                            <!-- btns -->
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-primary" value="搜尋">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- SP Start -->
+                <section class="sp">
+                    <!-- <h3>申請基本資料</h3> -->
+                    <section class="flex">
+                        <!-- tag 文章標籤 -->
+                        <div class="tag">
+                            <ul>
+                                <!--各種可用的篩選樣式-->
+                                <!-- <li><a href="#" class="all checked">全部<span>10</span></a></li>
+                                <li><a href="#" class="draft">初審暫存<span>8</span></a></li>
+                                <li><a href="#" class="processing">待審核<span>8</span></a></li>
+                                <li><a href="#" class="processing">補件審核<span>8</span></a></li>
+                                <li><a href="#" class="addition">待補件<span>8</span></a></li>
+                                <li><a href="#" class="reject">初審不通過<span>8</span></a></li>
+                                <li><a href="#" class="pass">待分派<span>8</span></a></li>
+                                <li><a href="#" class="draft">草稿<span>8</span></a></li> -->
+                                <!--各種可用的篩選樣式-->
+                                <li><a href="#" class="processing checked">全部<span>10</span></a></li>
+                                <li><a href="#" class="processing">待資格審<span>8</span></a></li>
+                                <li><a href="#" class="processing">待資格審(暫存)<span>8</span></a></li>
+                                <li><a href="#" class="processing">待補件<span>8</span></a></li>
+                                <li><a href="#" class="processing">補件待審<span>8</span></a></li>
+                                <li><a href="#" class="processing">資格審不通過<span>8</span></a></li>
+                                <li><a href="#" class="processing">資格審查通過(送委員審查)<span>8</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="btn_grp">
+                            <input type="button" class="btn btn-branch" id="openModal" value="批次分派">
+                        </div>
+                    </section>
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th class="sort down">系統編號</th>
+                            <!--sort的格式-->
+                            <!--th class="sort">系統編號</th>
+                            <th class="sort up">系統編號</th>
+                            <th class="sort down">系統編號</th-->
+                            <th>類別</th>
+                            <th>計畫模組</th>
+                            <th>申請公司</th>
+                            <th>申請者帳號</th>
+                            <th class="sort">申請日期</th>
+                            <th class="sort">建立日期</th>
+                            <th>計畫狀態</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>新增</td>
+                            <td>企業加速器</td>
+                            <td>申請公司完整名稱</td>
+                            <td>申請Account</td>
+                            <td>2018/7/11 17:22</td>
+                            <td>2018/7/11 17:22</td>
+                            <td><span class="processing">待資格審</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>11103C003</td>
+                            <td>新增</td>
+                            <td>在地青年創育坊｜標竿組</td>
+                            <td>公司完整名稱公司完整名稱公司完整名稱公司完整名稱</td>
+                            <td>liucc910</td>
+                            <td>2021/7/11 17:22</td>
+                            <td>2021/7/1 17:22</td>
+                            <td><span class="processing">待審核</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理" onclick="javascript:location.href='admin_preliminaryEdit2.html'">
+                                    <!--input type="button" class="btn btn-secondary" value="次要按鈕">
+                                    <input type="button" class="btn btn-normal" value="一般按鈕"-->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>11003C003</td>
+                            <td>延續</td>
+                            <td>在地青年創育坊｜新銳組</td>
+                            <td>公司完整名稱</td>
+                            <td>user account</td>
+                            <td>2018/7/11 17:22</td>
+                            <td>2018/7/11 17:22</td>
+                            <td><span class="processing">待補件</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>延續</td>
+                            <td>國際創育加速器</td>
+                            <td>公司完整名稱</td>
+                            <td>liucc12345</td>
+                            <td>2018/7/11 17:22</td>
+                            <td>2018/7/11 17:22</td>
+                            <td><span class="processing">審核不通過</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>延續</td>
+                            <td>國際創育加速器</td>
+                            <td>公司完整名稱</td>
+                            <td>會員帳號</td>
+                            <td>2018/7/11 17:22</td>
+                            <td>2018/7/11 17:22</td>
+                            <td><span class="processing">待分派</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>延續</td>
+                            <td>國際創育加速器</td>
+                            <td>公司完整名稱</td>
+                            <td>Account</td>
+                            <td>2018/7/11 17:22</td>
+                            <td>2018/7/11 17:22</td>
+                            <td><span class="processing">草稿</span></td>
+                            <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- <div class="notice_info">請注意，每一公司帳號每年度只能送出一筆申請計畫。請務必確認清楚後再送出申請計畫。</div> -->
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select> 筆， <input type="button" class="btn" value="確定">
+                            </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first">
+                                <a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev">
+                                <a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="next">
+                                <a href="#" title="下一頁">下一頁 </a>
+                            </li>
+                            <li class="last">
+                                <a href="#" title="最後一頁">最後一頁 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- SP End -->
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

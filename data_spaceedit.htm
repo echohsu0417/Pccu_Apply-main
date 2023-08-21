@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea.tinymce',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount'
+        ],
+        mobile: { 
+            theme: 'mobile' 
+        },
+        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+        ],
+        });
+    </script>
+    <style>
+        .mce-notification-inner, .mce-notification-warning {visibility: hidden;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>空間管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>編修空間 - 101全室</h2>
+                        <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
+                        <div class="function">
+                            <ul>
+                                <li ><a href="schedulerentEdit.htm">租借費用設定</a></li>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="flex-12">
+                        <div class="col">
+                            <!-- 中央區塊 -->
+                            <div class="content_block edit_block">
+                                <div class="tabBtn_block">
+                                    <div class="tab_items">
+                                        <button class="btn active"><i class="i_edit"></i>基本資料設定</button>
+                                        <button class="btn"><i class="i_setting"></i>關聯設定</button>
+                                        <button class="btn"><i class="i_info"></i>SEO設定</button>
+                                    </div>
+                                </div>
+                                <!--頁籤區-->
+                                <div class="tab__content">
+                                    <!--tabcontent 1 --><!--空間基本資料設定-->
+                                    <div class="active">
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>基本資料設定</h3>
+                                                <div class="flex-form">
+                                                    <div class="form_grp data-title">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="">
+                                                            <label>請輸入場地名稱<abbr>*</abbr></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="_content">
+                                                <!-- 測試 tinyMCE 自由編輯區 -->
+                                                <div class="cp user_edit" style="min-height:500px;">
+                                                    
+                                                    <textarea class="tinymce">
+                                                        <h2 style="text-align: center;">101 全室</h2>
+                                                        <p style="text-align: center;">
+                                                          <img title="" src="images/demo/2011 101-02.jpg" alt="" width="350px" height="auto" style="float:left;margin:3px 25px 10px 0;" />
+                                                        </p>
+                                                        <p>
+                                                            會議室101可針對不同性質會議需求作彈性隔間，可全室打通或隔成四間（101A、101B、101C、101D）、或隔成二間（101AB、101CD），分別容納88－744人不等。本會議室最大特色為設有階梯式電動彈射椅，當使用全間或二間之會議室時，後半段的彈射椅(計:220席*2側=400席)可彈出使用。101會議室共有10間同步口譯室供租用。
+                                                        </p>
+                                                      
+                                                        <h2>101 全室特色介紹</h2>
+                                                      
+                                                        <ul>
+                                                          <li>本會議室為多元會議空間，可布置為劇院型、教室型/、馬蹄形使用，舒適氣派，為企業團體會議首選。</li>
+                                                          <li>本會議室為一間大型會議室，可隔成四小間或二小間使用 <a href="https://community.tinymce.com/forum/" target="_blank">平面圖一覽</a></li>
+                                                          <li>本會議室另可作為洽談或展覽空間使用，洽談可容納256個位置、展覽則可容納57個攤位。</li>
+                                                        </ul>
+                                                      
+                                                        <h2>會議室設備簡介</h2>
+                                                      
+                                                        <table style="text-align:left;">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>類型</th>
+                                                              <th>設備簡介</th>
+                                                              <th>備註</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td>免費提供標準配備</td>
+                                                              <td>有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個</td>
+                                                              <td>免費提供</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>本會議室專屬設備/td>
+                                                              <td>網際網路數據專線、1KW聚光燈、會議系統、投影機(HD)</td>
+                                                              <td>本會議室可加租設備</td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      
+                                                        <h2>應用範例</h2>
+                                                      
+                                                        <p>
+                                                          本會議室室合辦理課程、座談、演講等研習或商務會議。<br>近期辦理了「<a href="#">第二屆Super TaiRa／GloRa國際論壇</a>」、「<a href="#">淨零碳排論壇暨展覽</a>」等國際大型論壇與展覽，是您專業研習、論壇、展覽的最佳選擇。
+                                                        </p>
+                                                        <hr>
+                                                      
+                                                        <h2>注意事項</h2>
+                                                      
+                                                        <p>
+                                                          Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.
+                                                        </p>
+                                                        <p>
+                                                          Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
+                                                        </p>
+                                                    </textarea>
+
+                                                </div>
+                                                
+                                                <div class="setting_block">
+                                                    <h4>設備與格局</h4>
+                                                    <!--div class="form_grp">
+                                                        <div class="form_title">場地類型： </div>
+                                                        <div class="form_content">
+                                                            <div class="radio_grp form_inline">
+                                                                <label><input name="spacetype" type="radio" value="all" checked><span>全室</span></label>
+                                                                <label><input name="spacetype" type="radio" value="1"><span>單間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="2"><span>雙間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="3"><span>三間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="4"><span>四間</span></label>
+    
+                                                                <label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div-->
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_title">樓層： </div>
+                                                        <div class="form_content">
+                                                            <div class="radio_grp form_inline">
+                                                                <label><input name="floor" type="radio" value="1" checked><span>1F</span></label>
+                                                                <label><input name="floor" type="radio" value="2"><span>2F</span></label>
+                                                                <label><input name="floor" type="radio" value="3"><span>3F</span></label>
+                                                                <label><input name="floor" type="radio" value="4"><span>4F</span></label>
+                                                                <label><input name="floor" type="radio" value="5"><span>5F</span></label>
+                                                                <label><input name="floor" type="radio" value="6"><span>6F</span></label>
+                                                                <label><input name="floor" type="radio" value="O">其他： <input name="" type="text" value="" style="width:150px;border-radius:0;"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_title">用途： </div>
+                                                        <div class="form_content">
+                                                            <div class="check_grp form_inline">
+                                                                <label><input name="333" type="checkbox" value=""><span>會議、典禮、教育訓練</span></label>
+                                                                <label><input name="333" type="checkbox" value=""><span>餐宴</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;vertical-align:middle;">
+                                                        <div class="form_title">格局人數： </div>
+                                                        <div class="form_content">
+                                                            <div class="check_grp form_inline">
+                                                                <label><input name="222" type="checkbox" value="">教室型： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">馬蹄型U： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">劇院型： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">劇院型含彈射椅： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">攤位數： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <!--label><input name="222" type="checkbox" value="">展覽： <input name="" type="text" value="" style="width:50px;"> 人</label-->
+                                                                <label><input name="222" type="checkbox" value="">其他格局： <input name="" type="text" value="" style="width:100px;">／<input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_title">會議設備： </div>
+                                                        <div class="form_content">
+                                                            <div class="check_grp form_inline">
+                                                                <label><input name="111" type="checkbox" value="" checked><span>投影機(HD)</span></label>
+                                                                <label><input name="111" type="checkbox" value="" checked><span>PA音響設備</span></label>
+                                                                <label><input name="111" type="checkbox" value="" checked><span>聚光燈</span></label>
+                                                                <label><input name="111" type="checkbox" value="" checked><span>網際網路數據專線</span></label>
+                                                                <label><input name="111" type="checkbox" value=""><span>桌子</span></label>
+                                                                <label><input name="111" type="checkbox" value=""><span>座椅</span></label>
+                                                                <label><input name="111" type="checkbox" value=""><span>其他： </span><input name="" type="text" value="" style="width:300px;"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h4>空間資訊</h4>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>攤位數(3公尺*2公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(平方公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(坪)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(長)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(寬)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(高)公尺</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr>
+                                                <!-- 圖片上傳區 -->
+                                                <div class="setting_block">
+                                                    <h4>空間與應用實景照
+                                                        <!--改成上傳和圖庫選擇-->
+                                                        <!-- <button class="btn btn-xs btn-addfile"><i class="i_add"></i>上傳圖片</button>
+                                                        <button class="btn btn-xs" data-fancybox data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_photo"></i>上傳圖片</button>
+                                                        <button class="btn btn-xs" data-fancybox data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_photo"></i>圖庫選擇</button> -->
+                                                    </h4>
+                                                    <!--展開上傳模式不使用-->
+                                                    <div class="upload_content">
+                                                        <a href="#" class="close"><i class="i_close"></i></a>
+                                                        <p>請把檔案拖曳到此區域，或按此<button class="btn btn-xs btn-blue">上傳檔案</button>；每筆檔案限制<span>1</span>MB</p>
+                                                        <div class="photo_list">
+                                                            <div class="item">
+                                                                <!-- 上傳完，移除loading -->
+                                                                <div class="img-container">
+                                                                    <!-- <div class="loading"></div> -->
+                                                                    <img src="images/demo/2011 101-02.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <!-- <div class="loading"></div> -->
+                                                                    <img src="images/demo/02.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/03.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/04.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/05.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/06.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/07.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/08.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item error">
+                                                                <a href="#" class="delete"><i class="i_close"></i></a>
+                                                                <div class="img-container">
+                                                                    <img src="images/demo/08.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>檔案上傳錯誤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
+                                                        <p><em>上傳圖片檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+                                                    <p class="tips">請注意：接受JPG,PNG等圖片格式，檔案大小請勿超過1MB。若涉及侵權或危害善良風俗者，上傳單位應自負咎責。</p>
+                    
+                                                    <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/2011 101-02.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="101全室空間圖" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/101AB(001).jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="101AB分租格局" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                            <!--div class="additional">
+                                                                <div class="checkbox_grp">
+                                                                    <label><input name="checkSample" type="checkbox" value=""><span>主圖</span></label>
+                                                                </div>
+                                                            </div-->
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/101會議室 劇院型.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="會議應用範例" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- 實境VR連結 -->
+                                                <div class="setting_block">
+                                                    <h4>實境導覽</h4>
+                                                    <div class="link_block">
+                                                        <div class="item">
+                                                            <div class="flex-form">
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="">
+                                                                        <label>連結名稱</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="">
+                                                                        <label>請填入嵌入URL連結位址</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>清空</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 空間平面圖上傳 -->
+                                                <div class="setting_block">
+                                                    <h4>空間平面圖上傳 <button class="btn btn-xs"><i class="i_addfile"></i>更換檔案</button></h4>
+                                                    <div class="fileDragDrop" style="display: none;">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                      </div>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/101ABCD-space-.png" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="101全室空間圖" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        </div>
+                                                        <!--div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div-->
+                                                    </div>
+                                                </div>
+                                                <!-- 樓層導覽圖上傳 -->
+                                                <div class="setting_block">
+                                                    <h4>樓層導覽圖上傳 <button class="btn btn-xs"><i class="i_addfile"></i>更換檔案</button></h4>
+                                                    <div class="fileDragDrop" style="display: none;">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/101ABCD-floor.png" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!--備註-->
+                                                <div class="setting_block">
+                                                    <h4>備註</h4>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <textarea>本中心提供每間會議室桌椅數量以價目表所列標準容量為限，額外需求或現場追加桌椅費用另計。
+免費提供標準配備：有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個，其它設備依價目表收費。</textarea>
+                                                                <!--label>備用Textarea欄位</label-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!--tabcontent 2 --><!--關聯設定-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>關聯設定</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <!-- setting_block為資料上稿專用 -->
+                                                <div class="setting_block">
+                                                    <div class="flex-form">
+                                                        <h4>格局</h4>
+                                                        <div class="form_grp">
+                                                            <!--div class="form_title">格局： </div-->
+                                                            <div class="form_content">
+                                                                <div class="radio_grp form_inline">
+                                                                    <label><input name="spacetype" type="radio" value="all" checked><span>全室格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="1"><span>單間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="2"><span>雙間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="3"><span>三間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="4"><span>四間格局</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-form">
+                                                        <h4>子場地(合併/分租格局)</h4>
+                                                        <div class="form_grp">
+                                                            <select id="select1" multiple>
+                                                                <option value="101">101 / 全室</option>
+                                                                <option value="101A">101A / 單間</option>
+                                                                <option value="2">101B / 單間</option>
+                                                                <option value="3">101C / 單間</option>
+                                                                <option value="4">101D / 單間</option>
+                                                                <option value="5">101AB / 雙間</option>
+                                                                <option value="6">101CD / 雙間</option>
+                                                                <option value="7" disabled>101AD / 雙間</option>
+                                                                <option value="8" disabled>101BC / 雙間</option>
+                                                                <option value="9">201 / 全室</option>
+                                                                <option value="9">201A / 單間</option>
+                                                                <option value="9">201B / 單間</option>
+                                                            </select>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex-form">
+                                                        <h4>關聯文件(開啟lightbox選擇模式)
+                                                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
+                                                        </h4>
+                                                        <div class="upload_block">
+                                                            <div class="attachment_list">
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <span>最新優惠｜網路需求表暨通案優惠方案測試測試 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <span>場地價目表｜會場租金價目表 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <h4>關聯問答(開啟lightbox選擇模式)
+                                                            <button class="btn btn-xs"><i class="i_addfile"></i>選入資料</button>
+                                                        </h4>
+                                                        <div class="upload_block" style="clear:both;">
+                                                            <div class="attachment_list">
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <span>關於TICC｜前往TICC如何搭乘大眾捷運? </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <span>會展設施｜外貿協會經營那些會展設施 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr>
+                                                    <div class="flex-form">
+                                                        <h4>檔期關閉設定</h4>
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline" style="margin-top:20px;">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="2022春節檔期" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                                <input name="" type="text" value="2022-01-29" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-02-06" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;" checked><span>不開放預約</span></label>
+                                                                        </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--div class="form_grp form_inline" style="flex:0 1 50%;padding-left:.5em;">
+                                                                <div class="datepick">
+                                                                    <div class="startDate">
+                                                                        <div class="labelEffect">
+                                                                            <input name="" type="text" value="2022-01-29" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                            <label>開始日期</label>
+                                                                        </div>
+                                                                        <div class="help">說明文字</div>
+                                                                    </div>
+                                                                    <div class="endDate">
+                                                                        <div class="labelEffect">
+                                                                            <input name="" type="text" value="2022-02-06" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                            <label>結束日期</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><button class="btn" style="height:2.75em;padding-left:1em;position:absolute;right:3em;"><i class="i_close"></i>移除本組設定</button></div-->
+                                                        </div>
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="可預約只是標示用" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-01" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-07" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;"><span>不開放預約</span></label>
+                                                                        </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="例行維修" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                                <input name="" type="text" value="2022-07-01" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-07" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;" checked><span>不開放預約</span></label>
+                                                                        </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <button class="btn btn-yellow" style="height:2.75em;"><i class="i_add"></i>新增一組檔期 </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 3-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>Metadata編輯</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="setting_block">
+                                                    <div class="flex-form">
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>標題<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>主旨<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <textarea></textarea>
+                                                                <label>多行文字輸入表單</label>
+                                                            </div>
+                                                            <div class="help">說明文字</div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>貢獻者<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>資料類型</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>資料格式</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp datepick">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="calendar" value="" class="calendar">
+                                                                <button class="btn"><i class="i_calendar"></i></button>
+                                                                <label>日期選擇</label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>來源<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>貢獻者<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>涵蓋範圍<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>識別資料<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>關聯<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>著作權<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>語言</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_grp">
+                                                            <button class="btn">清除以上資料</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>發佈選項</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">發佈時間<abbr>*</abbr></div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="2021-10-03T19:30">
+                                                    <!--button class="btn"><i class="i_calendar"></i></button-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">下架時間</div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="">
+                                                    <!--input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--hr>
+                                        <div class="form_grp">
+                                            <div class="form_title">另開視窗<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioSample" type="radio" value="" checked><span>否</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>是</span></label>
+                                                </div>
+                                            </div>
+                                        </div-->
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>資料狀態</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked><span>公開(啟用)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>不公開(隱藏)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>下架(停用)</span></label>
+                                                    <!--label><input name="radioStatus" type="radio" value=""><span>草稿</span></label-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <!--button class="btn btn-green">暫存</button>
+                                        <button class="btn">預覽</button-->
+                                        <button class="btn btn-orange">確定發布</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span>系統管理者(admin)
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ticc.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    
+</body>
+
+</html>

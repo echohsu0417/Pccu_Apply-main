@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body id="login">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="#"><img src="images/logo.png" alt="網站標題" /></a>
+                </h1>
+                <a href="#" class="back">返回創育加速卓越服務網</a>   
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+            <!-- //// class 都可以隨意命名 !!! ///// -->
+            <!--  兩欄樣式 -->
+            <section class="registe">
+                <h2>申請單位註冊</h2>
+                <div class="container">
+                    <form action="" class="form_grid">
+                        <div class="form_grp"><!--帳號，不使用email當作帳號-->
+                            <label for="username"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>帳號</label>
+                            <div>
+                                <input type="text" id="username" placeholder="請輸入未來登入要使用的帳號">
+                            </div>
+                            <div class="notic">帳號已被使用，請更換帳號</div>
+                        </div>
+                        <div class="form_grp"><!--申請單位名稱-->
+                            <label for="address"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請單位名稱</label>
+                            <div>
+                                <input type="text" id="" placeholder="請輸入申請單位名稱">
+                            </div>
+                            <div class="notic">請輸入申請單位名稱</div>
+                        </div>
+                        <div class="form_grp"><!--密碼-->
+                            <label for="password"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>密碼</label>
+                            <div>
+                                <input name="password" type="password" placeholder="請輸入密碼" id="myInput">
+                                <div class="notic checked"><label><input type="checkbox" onclick="myFunction()">顯示密碼</label></div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+                            </div>
+                            <div class="notic">請輸入密碼</div>
+                            <div class="notic checked">包含英文字母大小寫</div>
+                            <div class="notic uncheck">至少包含 1 個數字</div>
+                            <div class="notic uncheck">至少包含 1 個符號</div>
+                            <div class="notic uncheck">長度大於 5 個字元 </div>
+                        </div>
+                        <div class="form_grp"><!--再次確認密碼-->
+                            <label for="password"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>密碼二次確認</label>
+                            <div>
+                                <input name="password" type="password" placeholder="請輸入密碼">
+                            </div>
+                            <div class="notic">密碼輸入不一致，請重新輸入</div>
+                        </div>
+                        <div class="form_grp"><!--聯絡email-->
+                            <label for="username"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡email (計畫聯絡人)</label>
+                            <div>
+                                <input type="text" id="username" placeholder="請輸入主要聯絡人email">
+                                <!-- <input type="text" id="username" value="readonly or disable" readonly=""> -->
+                            </div>
+                            <div class="notic">需透過此email收取啟用email進行驗證</div>
+                            <div class="notic">請輸入正確的email</div>
+                        </div>
+                        <div class="form_grp"><!--聯絡人姓名-->
+                            <label for="address"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡人姓名</label>
+                            <div>
+                                <input type="text" id="" placeholder="請輸入主要聯絡人姓名">
+                            </div>
+                            <div class="notic">請輸入聯絡人姓名</div>
+                        </div>
+
+                        <div class="robert"><img src="images/notrobert.jpg" alt="">
+                        <span class="notic">請勾選我不是機器人驗證碼</span>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" checked>我同意網站 <a href="#">隱私權政策</a></label>
+                        <span class="notic">註冊前請閱讀隱私權政策，並請勾選同意網站隱私權政策</span>
+                        </div>
+                        <!-- 按鈕 -->
+                        <div class="btn_grp">
+                            <input name="" type="submit" class="btn btn-submit" value="送出" />
+                            <input name="" type="reset" class="btn btn-reset" value="清除重填" />
+                        </div>
+                    </form>
+                    <div class="go_login">
+                        <a href="#">已有帳號，立即登入</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

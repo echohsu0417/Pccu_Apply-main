@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <!-- <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a> -->
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                </h1>
+                <a href="#" class="back">返回創育加速卓越服務網</a>
+                <p class="user">您好，liucc910hyweb@gmail.com<a href="">登出</a></p>
+                <!-- noscript -->
+                <!-- <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript> -->
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">帳號管理</a></li>
+                        <li><a href="#">計畫清單</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
+            <!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+            <div class="container">
+                <h2 class="title">會員帳號管理</h2>
+
+                <!-- SP Start -->
+                <section class="sp">
+                    <form action="" class="form_grid">
+                        <div class="form_grp">
+                            <legend class="form_title">會員帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></legend>
+                            <div class="form_content">
+                                liucc
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">單位名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                            <div class="form_content form_inline">
+                                <input name="" type="text" value="單位名稱" placeholder="請輸入申請單位全名">
+                                <!--input name="" type="text" value="已經輸入的內容用value" readonly-->
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">登入密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                            <!--新增帳號時密碼為必填，編修帳號時則需勾選變更才出現-->
+                            <div class="form_content form_inline">
+                                <label>
+                                    <input type="checkbox" name="11" value="">重設密碼
+                                </label>
+                                <input name="" type="text" value="" placeholder="請輸入登入密碼" disabled id="myInput">
+                                <div class="notic checked"><label><input type="checkbox" onclick="myFunction()">顯示密碼</label></div>
+                                <script>
+                                function myFunction() {
+                                  var x = document.getElementById("myInput");
+                                  if (x.type === "password") {
+                                    x.type = "text";
+                                  } else {
+                                    x.type = "password";
+                                  }
+                                }
+                                </script>
+
+                                                            <div class="notic">請輸入密碼</div>
+                                                            <div class="notic checked">包含英文字母大小寫</div>
+                                                            <div class="notic uncheck">至少包含 1 個數字</div>
+                                                            <div class="notic uncheck">至少包含 1 個符號</div>
+                                                            <div class="notic uncheck">長度大於 5 個字元 </div>
+                                <input name="" type="text" value="" placeholder="請再確認一次登入密碼" disabled>
+                            </div>
+
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">聯絡email</label>
+                            <div class="form_content form_inline">
+                                <input name="" type="text" value="" placeholder="請輸入email">
+                                <div class="notic">此email將作為通知信發送收件信箱</div>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">聯絡人姓名</label>
+                            <div class="form_content form_inline">
+                                <input name="" type="text" value="" placeholder="請輸入使用者名稱">
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <input type="button" class="btn btn-primary" value="儲存變更">
+                        </div>
+                    </form>
+                </section>
+                <!-- SP End -->
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

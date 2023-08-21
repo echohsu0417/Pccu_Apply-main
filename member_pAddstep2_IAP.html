@@ -1,0 +1,1676 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <style>
+        .fill_in h3.title:before, .fill_in h3.title:after {display:none;}
+        .fill_in h3.title {cursor:initial;}
+    </style>
+
+   <script>
+        function alert1() {
+          alert("資料暫存成功");
+        }
+        function confirm1() {
+        confirm("確定要將計畫送出申請嗎？送出後計畫內容不得再編修");
+        }
+        function confirm2() {
+        confirm("確定刪除整體計畫內容？如欲提案須重新「新增計畫申請」");
+        }
+        function confirm3() {
+        confirm("確定要取消儲存目前所有已編輯內容？");
+        }
+        function confirm4() {
+        confirm("繼續編輯前是否將目前填寫內容先暫存為草稿？");
+        }
+        function confirm5() {
+        confirm("確定要放棄目前所有編輯內容返回清單？");
+        }
+        function confirm7() {
+        confirm("將新增計畫已填報項目(含自訂指標)複製到延續計畫會覆蓋掉目前所設定的所有欄位。確定複製？");
+        }
+        function alert7() {
+          alert("複製成功");
+        }
+   </script>
+
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <!-- <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a> -->
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                </h1>
+                <a href="#" class="back">返回創育加速卓越服務網</a>
+                <p class="user">您好，liucc910hyweb@gmail.com<a href="">登出</a></p>
+                <!-- noscript -->
+                <!-- <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript> -->
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">帳號管理</a></li>
+                        <li><a href="#">計畫清單</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
+            <!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+            <div class="container">
+                <h2 class="title">申請計畫</h2>
+                <!-- 計畫編號 -->
+                <div class="project">
+                    <ul>
+                        <li><b>系統編號：</b>送出申請後由系統產生</li>
+                        <li><b>計畫名稱：</b>113年度中小企業創育機構發展補助計畫(延續)</li>
+                    </ul>
+                </div>
+                <!-- step -->
+                <div class="steps">
+                    <ul>
+                        <li class="Pass">
+                            <span></span>
+                            <p>申請模組</p>
+                        </li>
+                        <li class="Now">
+                            <span></span>
+                            <p>申請資料填寫</p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>送出申請</p>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- filter box -->
+                <!-- 1 --><!--第一步資訊不可修改-->
+                <div class="filter_box">
+                    <h3 class="title opened">申請基本資訊</h3>
+                    <section style="display: block;">
+                        <div class="scroltable-wrapper"><div class="scroltable-nav scroltable-nav-left" style="display: none;"><div class="tablearrow_left" style="display: none; top: 10px;"></div></div><div class="scroltable-nav scroltable-nav-right" style="display: none;"><div class="tablearrow_right" style="display: none; top: 10px;"></div></div><div class="scroltable-container"><table class="scroltable">
+                            <tbody>
+                                <tr>
+                                    <th>案號</th>
+                                    <td>—</td>
+                                    <th>狀態</th>
+                                    <td>—</td>
+                                    <th>核定</th>
+                                    <td>—<!--(獲選 | 2,000,000)--></td>
+                                </tr>
+                                <tr>
+                                    <th>計畫模組</th>
+                                    <td>產業加速器</td>
+                                    <th>聯盟申請</th>
+                                    <td>聯合申請</td>
+                                    <th>協作申請</th>
+                                    <td>否</td>
+                                </tr>
+                                <tr>
+                                    <th>申請類型</th>
+                                    <td>公司</td>
+                                    <th>建立日期</th>
+                                    <td>2023/05/08 15:34:46</td>
+                                    <th>申請日期</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table></div></div>
+                    </section>
+                </div>
+        
+                <!-- SP Start -->
+                <section class="sp">
+                    <form id="AddProject3" class="form_grid" method="post" enctype="multipart/form-data" action="/Apply/AddProject3">
+                        <input id="buttonClick" name="buttonClick" type="hidden" value="">
+                        <input name="ProjectId" type="hidden" value="1013">
+                        <div class="validation-summary-valid" data-valmsg-summary="true">
+                            <ul>
+                                <li style="display:none"></li>
+                            </ul>
+                        </div>
+                        <!-- <h3>申請基本資料</h3> -->
+                        <div class="tabSet">
+                            <section class="tabs example-1" id="projectApplyTab" style="height: 1544.05px;">
+                                <h2 class="tabItem active" style="width: 221.4px; margin-left: 0px;"><a href="javascript:void(0)">1. 申請單位資訊</a></h2>
+                                <!--選到的頁籤項目 active-->
+                                <div class="tabContent" style="top: 45.0156px;">
+                                    <!--頁籤一，申請單位-->
+                                    <h3>主導單位資訊</h3>
+                                    
+        <div class="form_grid">
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請單位(創育機構名稱)</label>
+                <div class="form_content form_inline">
+                    <input name="[0].OrganizationName" type="text" value="112年測試一" placeholder="請輸入申請單位全名">
+                    <!--input name="" type="text" value="已經輸入的內容用value" readonly-->
+                    <div class="checkbox">
+                        <label><input name="sync2UserOrganization" type="checkbox" checked="">名稱將同步更新至帳號公司資訊</label>
+                        <input name="[0].Index" type="hidden" value="0">
+                        <input name="[0].OrganizationType" type="hidden" value="C">
+                        <input name="[0].MainApplyOrg" type="hidden" value="1">
+                        <input name="[0].ExecutorOrgId" type="hidden" value="3811">
+                    </div>
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人</label>
+                <div class="form_content form_inline mix-3-col">
+                    <input name="[0].LeaderName" type="text" placeholder="姓名">
+                    <input name="[0].LeaderOrganization" type="text" placeholder="單位">
+                    <input name="[0].LeaderTitle" type="text" placeholder="職稱">
+                    <input name="[0].LeaderPhone" type="text" placeholder="電話/手機號碼">
+                    <input name="[0].LeaderEmail" type="text" placeholder="email">
+                    <div class="notic">聯繫資訊皆為必填，請確實填寫聯絡資訊</div>
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>單位主管</label>
+                <div class="form_content form_inline mix-3-col">
+                    <input name="[0].InChargeOrgLeaderName" type="text" placeholder="姓名">
+                    <input name="[0].InChargeOrgLeaderOrganization" type="text" placeholder="單位">
+                    <input name="[0].InChargeOrgLeaderTitle" type="text" placeholder="職稱">
+                    <input name="[0].InChargeOrgLeaderPhone" type="text" placeholder="電話/手機號碼">
+                    <input name="[0].InChargeOrgLeaderEmail" type="text" placeholder="email">
+                    <div class="notic">為利資訊傳達，請主管與聯絡人之E-mail勿填同一信箱</div>
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫聯絡人</label>
+                <div class="form_content form_inline mix-3-col">
+                    <input name="[0].ContactName" type="text" value="佳淇測試" placeholder="姓名">
+                    <input name="[0].ContactOrganization" type="text" placeholder="單位">
+                    <input name="[0].ContactTitle" type="text" placeholder="職稱">
+                    <input name="[0].ContactPhone" type="text" placeholder="電話/手機號碼">
+                    <input name="[0].ContactEmail" type="text" value="liucc910hyweb@gmail.com" placeholder="email">
+                    <div class="notic">聯絡電話請確實填電話(含分機)、手機格式，例如：(02)2331-6086#7251、0900-000000</div>
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>單位地址(寄送公文使用)</label>
+                <div class="form_content form_inline address">
+                    <select id="OrganizationCity0" name="[0].OrganizationCity" onchange="fillCityDistrict('OrganizationCity0', 'OrganizationDistrict0');">
+            <option value="">請選擇</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="連江縣">連江縣</option>
+        </select>
+        <select id="OrganizationDistrict0" name="[0].OrganizationDistrict" onchange="fillZipCode('OrganizationDistrict0', 'OrganizationZipCode0');">
+            <option value="">請選擇</option>
+        </select>
+        <input id="OrganizationZipCode0" name="[0].OrganizationZipCode" type="text" placeholder="請先選擇縣市" readonly="">
+        <input id="OrganizationAddress0" name="[0].OrganizationAddress" type="text" placeholder="請輸入地址">
+        
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>培育空間地址</label>
+                <div class="form_content form_inline address">
+                    <select id="ParOrganizationCity0" name="[0].ParOrganizationCity" onchange="fillCityDistrict('ParOrganizationCity0', 'ParOrganizationDistrict0');">
+            <option value="">請選擇</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="連江縣">連江縣</option>
+        </select>
+        <select id="ParOrganizationDistrict0" name="[0].ParOrganizationDistrict" onchange="fillZipCode('ParOrganizationDistrict0', 'ParOrganizationZipCode0');">
+            <option value="">請選擇</option>
+        </select>
+        <input id="ParOrganizationZipCode0" name="[0].ParOrganizationZipCode" type="text" placeholder="請先選擇縣市" readonly="">
+        <input id="ParOrganizationAddress0" name="[0].ParOrganizationAddress" type="text" placeholder="請輸入地址">
+        
+                </div>
+            </div>
+            <div class="form_grp">
+                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>人力資源</label>
+                <div class="form_content">
+                    <div class="form_grp">
+                        <div class="form_content mix-4-col">
+                            <div class="form_grp">
+                                <label for="username">專任經理：</label>
+                                <input id="HumanResourcePm0" name="[0].HumanResourcePm" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(0);"><span>人</span>
+                            </div>
+                            <div class="form_grp">
+                                <label for="username">專任助理：</label>
+                                <input id="HumanResourceAssistant0" name="[0].HumanResourceAssistant" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(0);"><span>人</span>
+                            </div>
+                            <div class="form_grp">
+                                <label for="username">其他專任：</label>
+                                <input id="HumanResourceOthers0" name="[0].HumanResourceOthers" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(0);"><span>人</span>
+                            </div>
+                            <div class="form_grp">
+                                <label for="username">專任人力數：</label>由前方三欄加總
+                                <input id="HumanResourceTotal0" name="[0].HumanResourceTotal" type="text" value="0" placeholder="" readonly=""><span>人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form_grp">
+                <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>創育培育空間</div>
+                <div class="form_content">
+                    <div class="form_grp">
+                        <label for="selectSample" class="form_title">總培育空間</label>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <div class="form_content form_inline mix-float-col">
+                                    <div class="form_grp">
+                                        <!--由下方欄位加總-->
+                                        <input id="RoomTotal0" name="[0].RoomTotal" type="text" placeholder="請輸入數字" readonly="" value="0"><span>間</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">培育空間類型</label>
+                        <div class="form_content">
+                            <div class="check_grp">
+                                <label>
+                                    獨立培育室
+                                    <input id="Room4Ind0" name="[0].Room4Ind" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                                <label>
+                                    共同工作空間
+                                    <input id="Room4All0" name="[0].Room4All" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                                <label>
+                                    創客空間
+                                    <input id="Room4Inno0" name="[0].Room4Inno" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                                <label>
+                                    會議室
+                                    <input id="Room4Meeting0" name="[0].Room4Meeting" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                                <label>
+                                    實驗室
+                                    <input id="Room4Lab0" name="[0].Room4Lab" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                                <label>
+                                    展示場
+                                    <input id="Room4Demo0" name="[0].Room4Demo" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(0);"><span>間</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="notice_info">若申請單位與母組織地點不同，請分別詳列</div-->
+                </div>
+            </div>
+        </div>
+        
+        
+                                    <h3>協作單位資訊</h3>
+                                        <h4>－未申請協作單位者不需填寫－</h4>
+                                </div>
+                                <h2 class="tabItem" style="width: 221.4px; margin-left: 0px;"><a href="javascript:void(0)">2. 申請計畫資訊</a></h2>
+                                <div class="tabContent" style="top: 45.0156px;">
+                                    <!--頁籤二，計畫資訊-->
+                                    <h3>申請計畫資訊</h3>
+                                                                <div class="form_grid">
+                                        <div class="form_grp">
+                                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>執行期間</label>
+                                            <div class="form_content">
+                                                <div class="datepick">
+                                                    <input name="StartDate" type="date" value="2024-01-01" class="calendar" autocomplete="off" disabled="">
+                                                    <!-- <i class="i_calendar"></i> -->
+                                                </div>
+                                                <div class="datepick">
+                                                    <input name="EndDate" type="date" value="2024-12-31" class="calendar" placeholder="結束日期" disabled="">
+                                                    <!-- <i class="i_calendar"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聚焦產業領域</label>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline label_flex">
+                                                    <label><input type="checkbox" name="ProjectDomain" value="D14" onclick="ReCalculateProjectDomain(this, 1, 1);">資訊及數位產業</label>
+                                                    <label><input type="checkbox" name="ProjectDomain" value="D15" onclick="ReCalculateProjectDomain(this, 1, 1);">臺灣精準健康戰略產業</label>
+                                                    <label><input type="checkbox" name="ProjectDomain" value="D16" onclick="ReCalculateProjectDomain(this, 1, 1);">綠電及再生能源產業</label>
+                                                    <label><input type="checkbox" name="ProjectDomain" value="D17" onclick="ReCalculateProjectDomain(this, 1, 1);">民生及戰備產業</label>
+                                                </div>
+                                                <div id="DomainSelectionDescription" class="notice_info">已選擇0 項/ 至少應選擇 1 項，最多可選擇 1 項</div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                                <!--複製前一年第一年經費帶入-->
+                                                <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>延續計畫計畫經費</div>
+                                                <div class="form_content">
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title">政府補(捐)助款</label>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <div class="form_content mix-4-col">
+                                                                    <div class="form_grp">
+                                                                        <label for="username">總計：</label>
+                                                                        <input id="BudgetGovTotal" name="BudgetGovTotal" type="text" value="2,500,000" readonly=""><span>元</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <!-- <label for="username">自籌款÷總經費：</label> -->
+                                                                        <input id="BudgetFromGovPercent" name="BudgetFromGovPercent" type="text" value="100.00" readonly=""><span>％</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <label for="username">提案申請金額：</label>
+                                                                        <input id="BudgetFromGov" name="BudgetFromGov" type="text" readonly="" value="2,500,000" onblur="reCalculateBudget('T07', '產業加速器', 2500000, 2000000);"><span>元</span>
+                                                                    </div>
+                                                                    <div class="form_grp" style="display:none">
+                                                                        <label for="username">加值項目申請金額：</label>
+                                                                        <input id="BudgetFromAddon" name="BudgetFromAddon" type="text" value="0" readonly="" onblur="reCalculateBudget('T07', '產業加速器', 2500000, 2000000);"><span>元</span>
+                                                                    </div>
+                                                                    <div class="form_grp" style="display:none">
+                                                                        <label for="username">協作申請金額：</label>
+                                                                        <input id="Budget4Coop" name="Budget4Coop" type="text" value="0" onblur="reCalculateBudget('T07', '產業加速器', 2500000, 2000000);"><span>元</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="FirstYearPrompt">
+                                                                </div>
+                                                            </div>
+                                                            <div class="notice_info">政府補(捐)助款占總經費至多50%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title">自籌款</label>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <div class="form_content mix-4-col">
+                                                                    <div class="form_grp">
+                                                                        <label for="username">總計：</label>
+                                                                        <input id="BudgetFromSelf" name="BudgetFromSelf" type="text" value="0" readonly=""><span>元</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <!-- <label for="username">自籌款÷總經費：</label> -->
+                                                                        <input id="BudgetFromSelfPercent" name="BudgetFromSelfPercent" type="text" value="0.00" readonly=""><span>％</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <label for="username">母組織自籌款：</label>
+                                                                        <input id="BudgetFromParentOrg" name="BudgetFromParentOrg" type="text" value="0" onblur="reCalculateBudget('T07', '產業加速器', 2500000, 2000000);"><span>元</span>
+                                                                    </div>
+                                                                    <div class="form_grp" style="display:none">
+                                                                        <label for="username">企業配合款：</label>
+                                                                        <input id="BudgetFromEnt" name="BudgetFromEnt" type="text" value="0" onblur="reCalculateBudget('T07', '產業加速器', 2500000, 2000000);"><span>元</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="notice_info">自籌款不得低於計畫總經費50%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="selectSample" class="form_title">延續計畫總經費</label>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <div class="form_content form_inline mix-float-col">
+                                                                    <div class="form_grp"><!--等於政府補助款總計加自籌款總計-->
+                                                                        <input id="BudgetTotal" name="BudgetTotal" type="text" value="2,500,000" readonly=""><span>元</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="notice_info">本年度機制為定額補助，產業加速器250萬。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="form_grp">
+                                            <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫摘要</div>
+                                            <div class="form_content">
+                                                <textarea name="ProjectAbstract" id="" cols="30" rows="20" placeholder=""></textarea>
+                                                <div class="notice_info">請說明計畫內容摘要</div>
+                                            </div>
+                                        </div>
+										<div class="form_grp">
+                                            <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>是否申請加值項目「新創鏈結國際」</div>
+                                            <div class="form_content">
+												<div class="check_grp form_inline label_flex">
+                                                    <label><input type="checkbox" name="ValueAddItems" value="Y" onclick="">是</label>
+                                                    <label><input type="checkbox" name="ValueAddItems" value="N" onclick="">否</label>
+                                                </div>
+                                                <div class="notice_info">產業加速器-申請加值項目「新創鏈結國際」，本年度機制為定額補助金額200萬。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <h2 class="tabItem" id="projectTargetTabItem" style="width: 221.4px; margin-left: 0px;"><a href="javascript:void(0)">3. 工作進度表</a></h2>
+                                <div class="tabContent" id="projectTargetTabItemContent" style="top: 45.0156px;">
+                                    <!--頁籤三，工作進度表-->
+                                    <h3>工作進度表</h3>
+                                    <!-- 1 -->
+                                    <div class="notice_warning">「工作進度表」的「全年預估成果」、「期中查核點」、「百分比」皆僅能填列整數數字。</div>
+                                        <!-- 1 -->
+                                        <section class="fill_in">
+                                            <h3 class="title">延續計畫</h3>
+                                            <input id="CheckMidtermWeight" type="hidden" value="check">
+                                            <section id="projectTargetSection_New">
+                                        
+                                                        <h4 class="title">各模組必設指標 (60%)</h4>
+                                                            <!-- input 1 warn -->
+                                                            <div class="form_grp">
+                                                                <!--添加warn會於標題警示此列有誤-->
+                                                                <input name="NewPlanTargetItemId_001" type="hidden" value="263">
+                                                                <input name="NewProjectTargetItemId_001" type="hidden">
+                                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>遴選及培育中小企業家數。</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-3-col">
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">全年預估成果：</label>
+                                                                                        <input name="NewYearlyValue_001" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                                        <div class="notic" id="NewYearlyValueWarning_001"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewItemWeight_001" type="text" value="8" placeholder="佔比" disabled=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期中查核點：</label>
+                                                                                        <input name="NewMidtermValue_001" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                                        <div class="notic" id="NewMidtermValueWarning_001"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
+                                                                                        <input name="NewMidtermPercentage_001" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期末查核點：</label>
+                                                                                        <!--自動帶入全年預估所輸入-->
+                                                                                        <input name="NewFinalValue_001" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewFinalPercentage_001" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--div class="notice_info">提醒文字</div-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- input 1 warn -->
+                                                            <div class="form_grp">
+                                                                <!--添加warn會於標題警示此列有誤-->
+                                                                <input name="NewPlanTargetItemId_002" type="hidden" value="264">
+                                                                <input name="NewProjectTargetItemId_002" type="hidden">
+                                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>培育企業中包含至少12家新創企業。</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-3-col">
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">全年預估成果：</label>
+                                                                                        <input name="NewYearlyValue_002" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                                        <div class="notic" id="NewYearlyValueWarning_002"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewItemWeight_002" type="text" value="12" placeholder="佔比" disabled=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期中查核點：</label>
+                                                                                        <input name="NewMidtermValue_002" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                                        <div class="notic" id="NewMidtermValueWarning_002"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
+                                                                                        <input name="NewMidtermPercentage_002" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期末查核點：</label>
+                                                                                        <!--自動帶入全年預估所輸入-->
+                                                                                        <input name="NewFinalValue_002" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewFinalPercentage_002" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--div class="notice_info">提醒文字</div-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- input 1 warn -->
+                                                            <div class="form_grp">
+                                                                <!--添加warn會於標題警示此列有誤-->
+                                                                <input name="NewPlanTargetItemId_003" type="hidden" value="265">
+                                                                <input name="NewProjectTargetItemId_003" type="hidden">
+                                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>研提產業生態系鏈結機制與成果1式，其中生態系鏈結對象可包含該產業企業、創投、公協會或學研機構等至少10家，以提供特色化產業資源及輔導機制。</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-3-col">
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">全年預估成果：</label>
+                                                                                        <input name="NewYearlyValue_003" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>式</span>
+                                                                                        <div class="notic" id="NewYearlyValueWarning_003"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewItemWeight_003" type="text" value="10" placeholder="佔比" disabled=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期中查核點：</label>
+                                                                                        <input name="NewMidtermValue_003" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>式</span>
+                                                                                        <div class="notic" id="NewMidtermValueWarning_003"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
+                                                                                        <input name="NewMidtermPercentage_003" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期末查核點：</label>
+                                                                                        <!--自動帶入全年預估所輸入-->
+                                                                                        <input name="NewFinalValue_003" type="text" value="0" placeholder="input" readonly=""><span>式</span>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewFinalPercentage_003" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--div class="notice_info">提醒文字</div-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- input 1 warn -->
+                                                            <div class="form_grp">
+                                                                <!--添加warn會於標題警示此列有誤-->
+                                                                <input name="NewPlanTargetItemId_004" type="hidden" value="266">
+                                                                <input name="NewProjectTargetItemId_004" type="hidden">
+                                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>協助培育中小企業誘發投增資金額至少新臺幣4,000萬元。</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-3-col">
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">全年預估成果：</label>
+                                                                                        <input name="NewYearlyValue_004" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
+                                                                                        <div class="notic" id="NewYearlyValueWarning_004"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewItemWeight_004" type="text" value="15" placeholder="佔比" disabled=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期中查核點：</label>
+                                                                                        <input name="NewMidtermValue_004" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
+                                                                                        <div class="notic" id="NewMidtermValueWarning_004"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
+                                                                                        <input name="NewMidtermPercentage_004" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期末查核點：</label>
+                                                                                        <!--自動帶入全年預估所輸入-->
+                                                                                        <input name="NewFinalValue_004" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewFinalPercentage_004" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--div class="notice_info">提醒文字</div-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- input 1 warn -->
+                                                            <div class="form_grp">
+                                                                <!--添加warn會於標題警示此列有誤-->
+                                                                <input name="NewPlanTargetItemId_005" type="hidden" value="267">
+                                                                <input name="NewProjectTargetItemId_005" type="hidden">
+                                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>促成至少3家新創企業與中大企業合作共創家數。</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-3-col">
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">全年預估成果：</label>
+                                                                                        <input name="NewYearlyValue_005" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                                        <div class="notic" id="NewYearlyValueWarning_005"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewItemWeight_005" type="text" value="15" placeholder="佔比" disabled=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期中查核點：</label>
+                                                                                        <input name="NewMidtermValue_005" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                                        <div class="notic" id="NewMidtermValueWarning_005"></div>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
+                                                                                        <input name="NewMidtermPercentage_005" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_grp">
+                                                                                <div class="form_content mix-2-col">
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">期末查核點：</label>
+                                                                                        <!--自動帶入全年預估所輸入-->
+                                                                                        <input name="NewFinalValue_005" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                                    </div>
+                                                                                    <div class="form_grp">
+                                                                                        <label for="username">&nbsp;</label>
+                                                                                        <input name="NewFinalPercentage_005" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--div class="notice_info">提醒文字</div-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                        
+                                        
+                                                <h4 class="title">自設指標(自設指標合計) (40%)</h4>
+                                                <!--當模組有圈選物聯網特色加值時，自設指標需自動出現物聯網指標-->
+                                                <!--自設指標至少一組，佔比與物聯網共用-->
+                                                <!--自設指標樣式一，先新增一組指標與單位，再開始填寫-->
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>請輸入指標與指標單位</label>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <div class="form_content flex-63-col no-label">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-1-col">
+                                                                            <div class="form_grp">
+                                                                                <input name="NewProjectTargetName" type="text" placeholder="請輸入指標名稱" class="this" maxlength="60">
+                                                                                <div class="notic" id="NewSelfDefineGroupWarning">自設指標至少需要一組</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content mix-1-col">
+                                                                            <div class="form_grp">
+                                                                                <input name="NewProjectTargetUnit" type="text" placeholder="請輸入指標單位(例如：家數、場次、千元)" class="this" maxlength="3">
+                                                                                <div class="notic" id="NewProjectTargetUnitWarning"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="button" class="btn btn-addition" onclick="addSelfDefineItem('New', 'NewSelfDefine', 'NewProjectTargetName', 'NewProjectTargetUnit', 'NewSelfDefineBoundary', 'T07');">新增一組</button>
+                                                                </div>
+                                                                <div class="notice_info">
+                                                                    請注意，自設指標至少需要一組。請先輸入指標名稱與計量單位(例如：家／千元)後、點選新增一組<br>
+                                                                    指標名稱限60字以內、指標單位限3字以內
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div id="NewSelfDefineBoundary"></div>
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title">年度總計</label>
+                                                    <div class="form_content">
+                                                        <div class="form_grp">
+                                                            <div class="form_content mix-3-col">
+                                                                <div class="form_grp">
+                                                                    <label for="username">合計：</label>
+                                                                    <input name="NewTotalPercentage" type="text" placeholder="總計" value="60" readonly="" class="this"><span>%</span>
+                                                                    <div class="notic" id="NewTotalPercentageWarning"></div>
+                                                                </div>
+                                                                <div class="form_grp">
+                                                                    <label for="username">期中：</label>
+                                                                    <input name="NewMidtermPercentage" type="text" placeholder="總計" value="0.00" readonly="" class="this"><span>%</span>
+                                                                    <div class="notic" id="NewMidtermPercentageWarning"></div>
+                                                                </div>
+                                                                <div class="form_grp">
+                                                                    <label for="username">期末：</label>
+                                                                    <input name="NewFinalPercentage" type="text" placeholder="總計" value="0" readonly=""><span>%</span>
+                                                                    <div class="notic" id="NewFinalPercentageWarning"></div>
+                                                                </div>
+                                                            </div>
+                                                                <div class="notice_info">請注意：各指標年度合計需為100%，且期中達成率需至少佔比40%(含)以上</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--其他指標(可選擇性填寫，將列入審查參考，惟不列入期末執行進度查核範籌)-->
+                                                    <h4 class="title">其他指標(可選擇性填寫，將列入審查參考，惟不列入期末執行進度查核範籌)</h4>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">培育企業營業額（仟元）</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_28" type="hidden" value="28">
+                                                                                    <input type="number" name="NewOtherItemValue_28" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 28);" style="width:60%"><span>仟元</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_28"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">專業諮詢次數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_29" type="hidden" value="29">
+                                                                                    <input type="number" name="NewOtherItemValue_29" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 29);" style="width:60%"><span>次數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_29"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">培育企業每年維持就業機會人數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_30" type="hidden" value="30">
+                                                                                    <input type="number" name="NewOtherItemValue_30" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 30);" style="width:60%"><span>人數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_30"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">培育企業每年創造就業機會人數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_31" type="hidden" value="31">
+                                                                                    <input type="number" name="NewOtherItemValue_31" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 31);" style="width:60%"><span>人數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_31"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">協助申請政府資源件數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_32" type="hidden" value="32">
+                                                                                    <input type="number" name="NewOtherItemValue_32" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 32);" style="width:60%"><span>件數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_32"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">協助取得政府資源件數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_33" type="hidden" value="33">
+                                                                                    <input type="number" name="NewOtherItemValue_33" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 33);" style="width:60%"><span>件數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_33"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">協助取得政府資源金額（仟元）</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_34" type="hidden" value="34">
+                                                                                    <input type="number" name="NewOtherItemValue_34" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 34);" style="width:60%"><span>仟元</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_34"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">協助取得專利件數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_35" type="hidden" value="35">
+                                                                                    <input type="number" name="NewOtherItemValue_35" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 35);" style="width:60%"><span>件數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_35"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title">協助簽訂技轉件數</label>
+                                                            <div class="form_content">
+                                                                <div class="form_grp">
+                                                                    <div class="form_content flex-3-col">
+                                                                        <div class="form_grp">
+                                                                            <div class="form_content mix-2-col">
+                                                                                <div class="form_grp">
+                                                                                    <input name="NewOtherItemId_36" type="hidden" value="36">
+                                                                                    <input type="number" name="NewOtherItemValue_36" placeholder="請輸入" onchange="checkOtherItemValue(this, 'New', 36);" style="width:60%"><span>件數</span>
+                                                                                    <div class="notic" id="NewOtherItemValueWarning_36"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                            </section>
+                                        </section>
+                                </div>
+                                <h2 class="tabItem" id="coExecutorSectionTabItem" style="width: 221.4px; margin-left: 0px;"><a href="javascript:void(0)">4. 聯合申請(共同執行)</a></h2>
+                                <div class="tabContent" id="coExecutorSectionTabItemContent" style="top: 45.0156px;">
+                                    <!--頁籤四，共同執行單位，此頁籤只有申請聯合申請者會出現-->
+                                    <h3>聯合申請(共同執行)資訊</h3>
+                                        <div class="form_grid">
+                                            <section class="fill_in" id="CoExecutorOrder_1" name="CoExecutorOrder_1">
+                                                <h3 class="title" id="coExecutorOrganizationTitle_1" name="coExecutorOrganizationTitle_1">共同執行單位#1</h3>
+                                                <section>
+                                                    <!--新增聯盟申請類型設定，設定好身分後需應用、動態於附件產生對應欄位-->
+                                                    <div class="form_grp">
+                                                        <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯盟申請類型</label>
+                                                        <div class="form_content">
+                                                            <div class="radio_grp form_inline">
+                                                                <label><input type="radio" name="[1].OrganizationType" value="C" checked="">公司</label>
+                                                                <label><input type="radio" name="[1].OrganizationType" value="O">法人</label>
+                                                                <label><input type="radio" name="[1].OrganizationType" value="S">學校</label>
+                                                                    <input type="button" class="btn btn-primary" value="應用" onclick="addCoExecutorAttachSection(1013, -1, 1);">
+                                                            </div>
+                                                                <div class="notic">設定好身分後請先點選「應用」，系統會於「5.計畫附件」產生聯盟對應需上傳的檔案欄位。</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>共同執行單位(名稱)</label>
+                                                        <div class="form_content form_inline">
+                                                            <input name="[1].OrganizationName" type="text" placeholder="請輸入申請單位全名">
+                                                            <input name="[1].Index" type="hidden" value="1">
+                                                            <input name="[1].MainApplyOrg" type="hidden" value="0">
+                                                            <input name="[1].ExecutorOrgId" type="hidden" value="-1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人</label>
+                                                        <div class="form_content form_inline mix-3-col">
+                                                            <input name="[1].LeaderName" type="text" placeholder="姓名">
+                                                            <input name="[1].LeaderOrganization" type="text" placeholder="單位">
+                                                            <input name="[1].LeaderTitle" type="text" placeholder="職稱">
+                                                            <br>
+                                                            <input name="[1].LeaderPhone" type="text" placeholder="電話/手機號碼">
+                                                            <input name="[1].LeaderEmail" type="text" placeholder="email">
+                                                            <div class="notic">聯繫資訊皆為必填，請確實填寫聯絡資訊</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>單位主管</label>
+                                                        <div class="form_content form_inline mix-3-col">
+                                                            <input name="[1].InChargeOrgLeaderName" type="text" placeholder="姓名">
+                                                            <input name="[1].InChargeOrgLeaderOrganization" type="text" placeholder="單位">
+                                                            <input name="[1].InChargeOrgLeaderTitle" type="text" placeholder="職稱">
+                                                            <br>
+                                                            <input name="[1].InChargeOrgLeaderPhone" type="text" placeholder="電話/手機號碼">
+                                                            <input name="[1].InChargeOrgLeaderEmail" type="text" placeholder="email">
+                                                            <div class="notic">為利資訊傳達，請主管與聯絡人之E-mail勿填同一信箱</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫聯絡人</label>
+                                                        <div class="form_content form_inline mix-3-col">
+                                                            <input name="[1].ContactName" type="text" placeholder="姓名">
+                                                            <input name="[1].ContactOrganization" type="text" placeholder="單位">
+                                                            <input name="[1].ContactTitle" type="text" placeholder="職稱">
+                                                            <br>
+                                                            <input name="[1].ContactPhone" type="text" placeholder="電話/手機號碼">
+                                                            <input name="[1].ContactEmail" type="text" placeholder="email">
+                                                            <div class="notic">聯絡電話請確實填電話(含分機)、手機格式，例如：(02)2331-6086#7251、0900-000000</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>單位地址(寄送公文使用)</label>
+                                                        <div class="form_content form_inline address">
+                                                            <select id="OrganizationCity1" name="[1].OrganizationCity" onchange="fillCityDistrict('OrganizationCity1', 'OrganizationDistrict1');">
+                                                <option value="">請選擇</option>
+                                                            <option value="基隆市">基隆市</option>
+                                                            <option value="臺北市">臺北市</option>
+                                                            <option value="新北市">新北市</option>
+                                                            <option value="桃園市">桃園市</option>
+                                                            <option value="新竹市">新竹市</option>
+                                                            <option value="新竹縣">新竹縣</option>
+                                                            <option value="苗栗縣">苗栗縣</option>
+                                                            <option value="臺中市">臺中市</option>
+                                                            <option value="彰化縣">彰化縣</option>
+                                                            <option value="南投縣">南投縣</option>
+                                                            <option value="雲林縣">雲林縣</option>
+                                                            <option value="嘉義市">嘉義市</option>
+                                                            <option value="嘉義縣">嘉義縣</option>
+                                                            <option value="臺南市">臺南市</option>
+                                                            <option value="高雄市">高雄市</option>
+                                                            <option value="屏東縣">屏東縣</option>
+                                                            <option value="臺東縣">臺東縣</option>
+                                                            <option value="花蓮縣">花蓮縣</option>
+                                                            <option value="宜蘭縣">宜蘭縣</option>
+                                                            <option value="澎湖縣">澎湖縣</option>
+                                                            <option value="金門縣">金門縣</option>
+                                                            <option value="連江縣">連江縣</option>
+                                            </select>
+                                            <select id="OrganizationDistrict1" name="[1].OrganizationDistrict" onchange="fillZipCode('OrganizationDistrict1', 'OrganizationZipCode1');">
+                                                <option value="">請選擇</option>
+                                            </select>
+                                            <input id="OrganizationZipCode1" name="[1].OrganizationZipCode" type="text" placeholder="請先選擇縣市" readonly="">
+                                            <input id="OrganizationAddress1" name="[1].OrganizationAddress" type="text" placeholder="請輸入地址">
+                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>培育空間地址</label>
+                                                        <div class="form_content form_inline address">
+                                                            <select id="ParOrganizationCity1" name="[1].ParOrganizationCity" onchange="fillCityDistrict('ParOrganizationCity1', 'ParOrganizationDistrict1');">
+                                                <option value="">請選擇</option>
+                                                            <option value="基隆市">基隆市</option>
+                                                            <option value="臺北市">臺北市</option>
+                                                            <option value="新北市">新北市</option>
+                                                            <option value="桃園市">桃園市</option>
+                                                            <option value="新竹市">新竹市</option>
+                                                            <option value="新竹縣">新竹縣</option>
+                                                            <option value="苗栗縣">苗栗縣</option>
+                                                            <option value="臺中市">臺中市</option>
+                                                            <option value="彰化縣">彰化縣</option>
+                                                            <option value="南投縣">南投縣</option>
+                                                            <option value="雲林縣">雲林縣</option>
+                                                            <option value="嘉義市">嘉義市</option>
+                                                            <option value="嘉義縣">嘉義縣</option>
+                                                            <option value="臺南市">臺南市</option>
+                                                            <option value="高雄市">高雄市</option>
+                                                            <option value="屏東縣">屏東縣</option>
+                                                            <option value="臺東縣">臺東縣</option>
+                                                            <option value="花蓮縣">花蓮縣</option>
+                                                            <option value="宜蘭縣">宜蘭縣</option>
+                                                            <option value="澎湖縣">澎湖縣</option>
+                                                            <option value="金門縣">金門縣</option>
+                                                            <option value="連江縣">連江縣</option>
+                                            </select>
+                                            <select id="ParOrganizationDistrict1" name="[1].ParOrganizationDistrict" onchange="fillZipCode('ParOrganizationDistrict1', 'ParOrganizationZipCode1');">
+                                                <option value="">請選擇</option>
+                                            </select>
+                                            <input id="ParOrganizationZipCode1" name="[1].ParOrganizationZipCode" type="text" placeholder="請先選擇縣市" readonly="">
+                                            <input id="ParOrganizationAddress1" name="[1].ParOrganizationAddress" type="text" placeholder="請輸入地址">
+                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>人力資源</label>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <div class="form_content mix-4-col">
+                                                                    <div class="form_grp">
+                                                                        <label for="username">專任經理：</label>
+                                                                        <input id="HumanResourcePm1" name="[1].HumanResourcePm" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(1);"><span>人</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <label for="username">專任助理：</label>
+                                                                        <input id="HumanResourceAssistant1" name="[1].HumanResourceAssistant" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(1);"><span>人</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <label for="username">其他專任：</label>
+                                                                        <input id="HumanResourceOthers1" name="[1].HumanResourceOthers" type="number" value="0" placeholder="請輸入人數" onblur="reCalculatePeople(1);"><span>人</span>
+                                                                    </div>
+                                                                    <div class="form_grp">
+                                                                        <label for="username">專任人力數：</label>
+                                                                        <input id="HumanResourceTotal1" name="[1].HumanResourceTotal" type="text" value="0" placeholder="" readonly=""><span>人</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>創育培育空間</div>
+                                                        <div class="form_content">
+                                                            <div class="form_grp">
+                                                                <label for="selectSample" class="form_title">總培育空間</label>
+                                                                <div class="form_content">
+                                                                    <div class="form_grp">
+                                                                        <div class="form_content form_inline mix-float-col">
+                                                                            <div class="form_grp">
+                                                                                <input id="RoomTotal1" name="[1].RoomTotal" type="text" placeholder="請輸入數字" readonly="" value="0"><span>間</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <label for="" class="form_title">培育空間類型</label>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label>
+                                                                            獨立培育室
+                                                                            <input id="Room4Ind1" name="[1].Room4Ind" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                        <label>
+                                                                            共同工作空間
+                                                                            <input id="Room4All1" name="[1].Room4All" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                        <label>
+                                                                            創客空間
+                                                                            <input id="Room4Inno1" name="[1].Room4Inno" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                        <label>
+                                                                            會議室
+                                                                            <input id="Room4Meeting1" name="[1].Room4Meeting" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                        <label>
+                                                                            實驗室
+                                                                            <input id="Room4Lab1" name="[1].Room4Lab" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                        <label>
+                                                                            展示場
+                                                                            <input id="Room4Demo1" name="[1].Room4Demo" type="number" value="0" placeholder="請輸入數字" class="follower" onblur="reCalculateRoom(1);"><span>間</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--div class="notice_info">若申請單位與母組織地點不同，請分別詳列</div-->
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </section>
+                                        </div>
+                                        <button type="button" class="btn btn-addition" id="addOneCoExecutor" name="addOneCoExecutor" onclick="addCoExecutorSection(1013);">新增一組共同執行單位</button>
+                                </div>
+                                <h2 class="tabItem" style="width: 221.4px; margin-left: 0px; position: absolute; top: 0px; right: 0px;"><a href="javascript:void(0)">5. 計畫附件</a></h2>
+                                <div class="tabContent" style="top: 45.0156px;">
+                                    <!--頁籤五，計畫附件上傳-->
+                                    <h3>計畫附件</h3>
+                                    <div class="form_grid">
+                                        <div class="notice_warning">如以聯合申請，其主導單位與共同執行單位皆須符合該類型申請資格，請檢附各項資格文件。每一檔案大小請勿超過 20MB。</div>
+
+                                            <section class="fill_in" id="ProjectExecutorAttach_0" name="ProjectExecutorAttach_0">
+                                                <h3 class="title" id="ProjectExecutorAttachOrganizationTitle_0" name="ProjectExecutorAttachOrganizationTitle_0)">主導單位與計畫(公司) 附件</h3>
+                                                <section>
+                                                    <input name="[0].Index" type="hidden" value="0">
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫申請書(計畫書摘要表+本文，PDF 格式)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_1" name="AttachFile_0[1]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 1);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[1]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_1" name="AttachCode_0[1]" value="A01">
+                                                                            <input type="hidden" id="AttachChanged_0_1" name="AttachChanged_0[1]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_1">
+                                                                        <input class="" id="OriginalFileName_0_1" name="OriginalFileName_0[1]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">計畫申請書請依規定格式撰寫，計畫書本文以 20 頁為原則，並請分別上傳PDF與WORD格式</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫申請書(計畫書摘要表+本文，WORD 格式)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.doc,.docx)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_2" name="AttachFile_0[2]" accept=".doc,.docx" onchange="uploadFileNameChange(this.files, 0, 2);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[2]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_2" name="AttachCode_0[2]" value="A02">
+                                                                            <input type="hidden" id="AttachChanged_0_2" name="AttachChanged_0[2]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_2">
+                                                                        <input class="" id="OriginalFileName_0_2" name="OriginalFileName_0[2]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">計畫申請書請依規定格式撰寫，計畫書本文以 20 頁為原則，並請分別上傳PDF與WORD格式</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司/商業登記、其他經我國法律登記證明文件</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_3" name="AttachFile_0[3]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 3);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[3]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_3" name="AttachCode_0[3]" value="A03">
+                                                                            <input type="hidden" id="AttachChanged_0_3" name="AttachChanged_0[3]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_3">
+                                                                        <input class="" id="OriginalFileName_0_3" name="OriginalFileName_0[3]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_4" name="AttachFile_0[4]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 4);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[4]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_4" name="AttachCode_0[4]" value="A04">
+                                                                            <input type="hidden" id="AttachChanged_0_4" name="AttachChanged_0[4]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_4">
+                                                                        <input class="" id="OriginalFileName_0_4" name="OriginalFileName_0[4]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業無欠稅證明</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_5" name="AttachFile_0[5]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 5);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[5]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_5" name="AttachCode_0[5]" value="A05">
+                                                                            <input type="hidden" id="AttachChanged_0_5" name="AttachChanged_0[5]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_5">
+                                                                        <input class="" id="OriginalFileName_0_5" name="OriginalFileName_0[5]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>廠商信用證明(金融機構出具之信用證明文件)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_6" name="AttachFile_0[6]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 6);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[6]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_6" name="AttachCode_0[6]" value="A06">
+                                                                            <input type="hidden" id="AttachChanged_0_6" name="AttachChanged_0[6]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_6">
+                                                                        <input class="" id="OriginalFileName_0_6" name="OriginalFileName_0[6]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司淨值(股東權益)證明文件</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_7" name="AttachFile_0[7]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 7);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[7]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_7" name="AttachCode_0[7]" value="A07">
+                                                                            <input type="hidden" id="AttachChanged_0_7" name="AttachChanged_0[7]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_7">
+                                                                        <input class="" id="OriginalFileName_0_7" name="OriginalFileName_0[7]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯合申請協議書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_8" name="AttachFile_0[8]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 8);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[8]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_8" name="AttachCode_0[8]" value="A08">
+                                                                            <input type="hidden" id="AttachChanged_0_8" name="AttachChanged_0[8]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_8">
+                                                                        <input class="" id="OriginalFileName_0_8" name="OriginalFileName_0[8]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，以聯合申請方式提出申請者，應檢附「聯合申請協議書」</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫切結書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_9" name="AttachFile_0[9]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 9);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[9]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_9" name="AttachCode_0[9]" value="A09">
+                                                                            <input type="hidden" id="AttachChanged_0_9" name="AttachChanged_0[9]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_9">
+                                                                        <input class="" id="OriginalFileName_0_9" name="OriginalFileName_0[9]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_13" name="AttachFile_0[13]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 13);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[13]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_13" name="AttachCode_0[13]" value="A13">
+                                                                            <input type="hidden" id="AttachChanged_0_13" name="AttachChanged_0[13]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_13">
+                                                                        <input class="" id="OriginalFileName_0_13" name="OriginalFileName_0[13]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>自設或連結投資基金之相關佐證資料（如自設投資基金規章、連結外部投資基金之合作意向書等)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_0_18" name="AttachFile_0[18]" accept=".pdf" onchange="uploadFileNameChange(this.files, 0, 18);">
+                                                                            <input type="hidden" id="AttachId_0_-1" name="AttachId_0[18]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_0_18" name="AttachCode_0[18]" value="A18">
+                                                                            <input type="hidden" id="AttachChanged_0_18" name="AttachChanged_0[18]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_0_18">
+                                                                        <input class="" id="OriginalFileName_0_18" name="OriginalFileName_0[18]" type="text" value="" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式</div>
+                                                                </div>
+                                                            </div>
+                                                </section>
+                                            </section>
+                                            
+                                            <section class="fill_in" id="ProjectExecutorAttach_1" name="ProjectExecutorAttach_1">
+                                                <h3 class="title" id="ProjectExecutorAttachOrganizationTitle_1" name="ProjectExecutorAttachOrganizationTitle_1)">共同執行單位#1(公司) 附件</h3>
+                                                <section>
+                                                    <input name="[1].Index" type="hidden" value="1">
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司/商業登記、其他經我國法律登記證明文件</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_3" name="AttachFile_1[3]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 3);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[3]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_3" name="AttachCode_1[3]" value="A03">
+                                                                            <input type="hidden" id="AttachChanged_1_3" name="AttachChanged_1[3]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_3">
+                                                                        <input class="" id="OriginalFileName_1_3" name="OriginalFileName_1[3]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_4" name="AttachFile_1[4]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 4);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[4]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_4" name="AttachCode_1[4]" value="A04">
+                                                                            <input type="hidden" id="AttachChanged_1_4" name="AttachChanged_1[4]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_4">
+                                                                        <input class="" id="OriginalFileName_1_4" name="OriginalFileName_1[4]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業無欠稅證明</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_5" name="AttachFile_1[5]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 5);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[5]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_5" name="AttachCode_1[5]" value="A05">
+                                                                            <input type="hidden" id="AttachChanged_1_5" name="AttachChanged_1[5]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_5">
+                                                                        <input class="" id="OriginalFileName_1_5" name="OriginalFileName_1[5]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>廠商信用證明(金融機構出具之信用證明文件)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_6" name="AttachFile_1[6]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 6);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[6]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_6" name="AttachCode_1[6]" value="A06">
+                                                                            <input type="hidden" id="AttachChanged_1_6" name="AttachChanged_1[6]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_6">
+                                                                        <input class="" id="OriginalFileName_1_6" name="OriginalFileName_1[6]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司淨值(股東權益)證明文件</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_7" name="AttachFile_1[7]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 7);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[7]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_7" name="AttachCode_1[7]" value="A07">
+                                                                            <input type="hidden" id="AttachChanged_1_7" name="AttachChanged_1[7]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_7">
+                                                                        <input class="" id="OriginalFileName_1_7" name="OriginalFileName_1[7]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯合申請協議書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_8" name="AttachFile_1[8]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 8);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[8]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_8" name="AttachCode_1[8]" value="A08">
+                                                                            <input type="hidden" id="AttachChanged_1_8" name="AttachChanged_1[8]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_8">
+                                                                        <input class="" id="OriginalFileName_1_8" name="OriginalFileName_1[8]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式，以聯合申請方式提出申請者，應檢附「聯合申請協議書」</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫切結書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_9" name="AttachFile_1[9]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 9);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[9]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_9" name="AttachCode_1[9]" value="A09">
+                                                                            <input type="hidden" id="AttachChanged_1_9" name="AttachChanged_1[9]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_9">
+                                                                        <input class="" id="OriginalFileName_1_9" name="OriginalFileName_1[9]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_13" name="AttachFile_1[13]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 13);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[13]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_13" name="AttachCode_1[13]" value="A13">
+                                                                            <input type="hidden" id="AttachChanged_1_13" name="AttachChanged_1[13]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_13">
+                                                                        <input class="" id="OriginalFileName_1_13" name="OriginalFileName_1[13]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <!--計畫申請書(計畫書摘要表+本文)-->
+                                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>自設或連結投資基金之相關佐證資料（如自設投資基金規章、連結外部投資基金之合作意向書等)</label>
+                                                                <div class="form_content">
+                                                                    <div class="upload_grp">
+                                                                        <div class="upload_btn">
+                                                                            <span>上傳檔案(.pdf)</span>
+                                                                            <input type="file" class="check_file" id="AttachFile_1_18" name="AttachFile_1[18]" accept=".pdf" onchange="uploadFileNameChange(this.files, 1, 18);">
+                                                                            <input type="hidden" id="AttachId_1_-1" name="AttachId_1[18]" value="-1">
+                                                                            <input type="hidden" id="AttachCode_1_18" name="AttachCode_1[18]" value="A18">
+                                                                            <input type="hidden" id="AttachChanged_1_18" name="AttachChanged_1[18]" value="N">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload_delet_grp" id="upload_delet_grp_1_18">
+                                                                        <input class="" id="OriginalFileName_1_18" name="OriginalFileName_1[18]" type="text" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="notice_info">僅接受PDF格式</div>
+                                                                </div>
+                                                            </div>
+                                                </section>
+                                            </section>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- <div class="notice_info">請注意，每一公司帳號每年度只能送出一筆申請計畫。請務必確認清楚後再送出申請計畫。</div> -->
+                        <!-- btns -->
+                        <div class="btn_grp" id="tabItemFormSubmit">
+                            <!--112年補件允許編修第一步時出現-->
+                            <input name="addProject2FormSubmit_Draft" type="button" class="btn btn-secondary" value="編修第一步">
+                            <input name="addProject2FormSubmit_Draft" type="button" class="btn btn-secondary" value="暫存草稿" onclick="addProject2FormSubmit('Draft', 'T07');">
+                            <input name="addProject2FormSubmit_Delete" type="button" class="btn btn-normal" value="刪除計畫" onclick="addProject2FormSubmit('Delete', 'T07');">
+                            <input name="addProject2FormSubmit_Save" type="button" class="btn btn-primary" value="送出申請" onclick="addProject2FormSubmit('Save', 'T07')">
+                            <input name="addProject2FormSubmit_List" type="button" class="btn btn-normal" value="返回清單" onclick="addProject2FormSubmit('List', 'T07');">
+                        </div>
+                        <div class="notice_warning">請注意，必須所有頁籤的申請資料皆填寫完成方可送出申請。編輯完成前請使用暫存草稿。</div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KVcV7v8GW5DimYL9AGnEujdxg6NegTf55I2tmoSpgLsgZ5_IUKnwaAlLxavALru1f3hJBKHX4on2un3j4P-Sv_tNP4LF9txtvRcxjOp2afyARRsElG8S1CBulo4X3ofemlOVarpShj7_4IdWmIA5PPnXq0zOG6ytF8ES5ZBqTW8dFHYoX6RoqDvgyLC_vJF8A"></form>
+                </section>
+                <!-- SP End -->
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+    <script src="js/applyLib.js"></script>
+</body>
+</html>

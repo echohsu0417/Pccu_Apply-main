@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- 申請重審 -->
+    <div id="modal_info" class="tiny">
+        <section>
+            <!-- 2 -->
+            <h2>評審申請重審</h2>
+            <div class="form_content">
+                <p>系統編號：10703C003, 10703C003, 10703C003, 10703C003, 10703C003, 10703C003。已勾選共 10 筆。</p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="placeholder" disabled>顯示委員申請重審理由。只有單筆管理才顯示。</textarea>
+                <div class="notice_info">同意重審會將該委員案件狀態回復為「待評分(暫存)」，該計畫狀態亦將回復為「待書審」。</div>
+            </div>
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="同意">
+                <input type="button" class="btn btn-secondary" value="不同意">
+            </div>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="創育加速管理端" /></a>
+                </h1>
+                <!--a href="#" class="back">返回創育加速卓越服務網</a-->
+                <p class="user">您好，liucc@hyweb.com.tw<a href="">登出</a></p>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">案件管理</a>
+                            <ul>
+                                <li><a href="admin_preliminaryList.html">案件初審</a></li>
+                                <li><a href="admin_projectList.html">案件管理</a></li>
+                            </ul>
+                        </li>
+                        <!--評審委員功能-->
+                        <li><a href="admin_scoreList.html">線上審核</a></li>
+                        <li><a href="#">系統管理</a>
+                            <ul>
+                                <li><a href="admin_accountList.html">管理端帳號管理</a></li>
+                                <li><a href="admin_memberList.html">會員帳號管理</a></li>
+                                <li><a href="admin_judgesList.html">審核委員資料庫</a></li>
+                                <li><a href="admin_announceEdit.html">系統設定</a></li>
+                                <li><a href="admin_myAccountEdit.html">個人帳號管理</a></li>
+                            </ul>
+                        </li>
+                     </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage Manage">
+            <!-- 內頁新增一個classname-->
+            <div class="container">
+                <h2 class="title">委員申請重審</h2>
+                <!-- filter box -->
+                <div class="filter_box">
+                    <h3 class="title">條件搜尋</h3>
+                    <section>
+                        <form action="" class="form_grid form_inline mix-3-col">
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">類別：</label>
+                                    <select name="" id="">
+                                        <option value="">請選擇</option>
+                                        <option value="">技術創業放大器(TEA)</option>
+                                        <option value="">在地企業創新器(LEI)</option>
+                                        <option value="">國際創育加速器(ISA)</option>
+                                        <option value="">主題式國際創育加速器(FISA)</option>
+                                        <option value="">在地青年創育坊</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">計畫公司名稱：</label>
+                                    <input name="username" type="text" placeholder="請輸入計劃公司名稱">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">系統編號：</label>
+                                    <input name="username" type="text" placeholder="請輸入系統編號">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <label for="username">委員姓名：</label>
+                                    <input name="username" type="text" placeholder="請輸入分派委員姓名">
+                                </div>
+                            </div>
+                            <!-- btns -->
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-primary" value="搜尋">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- SP Start -->
+                <section class="sp">
+                    <!-- <h3>申請基本資料</h3> -->
+                    <section class="flex">
+                        <!-- tag 文章標籤 -->
+                        <div class="tag">
+                            <ul>
+                                <!--全部不包含會員端草稿-->
+                                <li><a href="#" class="processing checked">待處理<span>10</span></a></li>
+                                <li><a href="#" class="draft branch">同意<span>15</span></a></li>
+                                <li><a href="#" class="processing">不同意<span>8</span></a></li>
+                            </ul>
+                        </div>
+                        <!--先暫時兩個按鈕，後續請設計師改成下拉-->
+                        <div class="btn_grp">
+                            <!--label>匯出：</label-->
+                            <input type="button" class="btn btn-branch" value="批次管理" id="openInfo">
+
+                        </div>
+                    </section>
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th class="sort down">系統編號</th>
+                            <th>計畫類別</th>
+                            <th>計畫公司名稱</th>
+                            <th>計畫狀態</th>
+                            <th>申請委員</th>
+                            <th class="sort">申請重審日期</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>在地青年創育坊｜標竿組</td>
+                            <td>凌網科技股份有限公司</td>
+                            <td>書審完成(評審已審畢)</td>
+                            <td>劉佳淇</td>
+                             <td>2018/7/11 17:22</td>
+                           <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10703C003</td>
+                            <td>在地青年創育坊｜標竿組</td>
+                            <td>凌網科技股份有限公司</td>
+                            <td>待書審(已分派)</td>
+                            <td>劉佳淇</td>
+                             <td>2018/7/11 17:22</td>
+                           <td>
+                                <div class="btn_grp">
+                                    <input type="button" class="btn btn-primary" value="管理" id="openModal">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select> 筆， <input type="button" class="btn" value="確定">
+                            </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first">
+                                <a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev">
+                                <a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="next">
+                                <a href="#" title="下一頁">下一頁 </a>
+                            </li>
+                            <li class="last">
+                                <a href="#" title="最後一頁">最後一頁 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- SP End -->
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+
+
+</body>
+</html>

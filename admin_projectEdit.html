@@ -1,0 +1,1823 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- PDF -->
+    <div id="modal_PDF" class="PDF">
+        <h3>檢視計畫附檔</h3>
+        <input type="button" class="btn btn-position" value="下載PDF">
+        <div class="iframe"><iframe src="工作進度表.pdf" width="100%" height="100%"></iframe></div>
+    </div>
+    <!--分派評審委員跳窗-->
+    <div id="modal1" class="modal">
+        <form action="" class="form_grid">
+            <div class="form_grp">
+                <div class="form_content mix-3-col">
+                    <div class="form_grp">
+                        <label for="username">專業領域：</label>
+                        <input name="username" type="text" placeholder="請輸入專業領域關鍵字">
+                    </div>
+                    <div class="form_grp">
+                        <label for="username">身分別：</label>
+                        <select name="" id="">
+                            <option value="">請選擇</option>
+                            <option value="">產業</option>
+                            <option value="">政府</option>
+                            <option value="">學界</option>
+                            <option value="">法人及研究單位</option>
+                        </select>
+                    </div>
+                    <div class="form_grp">
+                        <label for="username">委員名稱：</label>
+                        <input name="username" type="text" placeholder="請輸入委員姓名關鍵字">
+                    </div>
+                </div>
+            </div>
+            <div class="btn_grp">
+                <!-- <button class="btn btn-reset" type="">放棄</button>
+                <button class="btn btn-submit" type="">暫存草稿</button> -->
+                <input type="button" class="btn btn-primary" value="搜尋">
+            </div>
+        </form>
+        <section>
+            <h2>搜尋結果</h2>
+            <table>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>委員姓名</th>
+                    <th>職稱</th>
+                    <th>單位</th>
+                    <th>身分別</th>
+                    <th>專長領域</th>
+                    <th>負責審核</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" checked></td>
+                    <td>劉一</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                    <td>學界</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" checked></td>
+                    <td>劉二</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                    <td>學界</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>劉三</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                    <td>學界</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>劉四</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                    <td>學界</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                </tr>
+            </table>
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="加入↓">
+                <!--input type="button" class="btn btn-secondary" value="移除"-->
+            </div>
+        </section>
+        <form>
+        <section>
+            <h2>已選入清單<span>3</span></h2>
+            <table>
+                <tr>
+                    <th>委員姓名</th>
+                    <th>職稱</th>
+                    <th>單位</th>
+                    <th>身分別</th>
+                    <th>專長領域</th>
+                    <th>負責審核</th>
+                    <th>移除</th>
+                </tr>
+                <tr>
+                    <td>劉一</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                    <td>產業</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                    <td><input type="button" class="btn btn-secondary" value="移除"></td>
+                </tr>
+                <tr>
+                    <td>劉二</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                     <td>產業</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                    <td><input type="button" class="btn btn-secondary" value="移除"></td>
+                </tr>
+                <tr>
+                    <td>劉三</td>
+                    <td>教授</td>
+                    <td>中國文化大學</td>
+                     <td>產業</td>
+                    <td>生技醫藥, 其他 </td>
+                    <td>待書審：<span>11</span>件&nbsp;｜&nbsp;已審畢：<span>15</span>件</td>
+                    <td><input type="button" class="btn btn-secondary" value="移除"></td>
+                </tr>
+            </table>
+            <!--div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="確定選擇">
+                <input type="button" class="btn btn-secondary" value="取消">
+            </div-->
+        </section>
+        <section>
+            <h2>設定評審期限</h2>
+            <div class="datepick">
+                  <input name="" type="date" value="2020-07-11" class="calendar" autocomplete="off">
+            </div>
+            
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="確定選擇">
+                <input type="button" class="btn btn-secondary" value="取消">
+            </div>
+        </section>
+        </form>
+    </div>
+    <!-- 直接跳主內容區 -->
+    <!-- <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <a href="index.htm"><img src="images/logo.png" alt="創育加速管理端" /></a>
+                </h1>
+                <!--a href="#" class="back">返回創育加速卓越服務網</a-->
+                <p class="user">您好，liucc@hyweb.com.tw<a href="">登出</a></p>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">案件管理</a>
+                            <ul>
+                                <li><a href="#">案件資格審</a></li>
+                                <!--第二層選單．不具權限者不可見-->
+                                <li><a href="#">案件管理</a></li>
+                                <!--li><a href="#">申請人管理</a></li-->
+                            </ul>
+                        </li>
+                        <!--評審委員功能-->
+                        <!--li><a href="#">線上審核</a></li-->
+                        <li><a href="#">系統管理</a>
+                            <ul>
+                                <li><a href="#">管理端帳號管理</a></li>
+                                <li><a href="#">會員帳號管理</a></li>
+                                <li><a href="#">審核委員資料庫</a></li>
+                                <li><a href="#">系統設定</a></li>
+                                <li><a href="#">個人帳號管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage Manage">
+            <!-- 內頁新增一個classname-->
+            <!-- <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a> -->
+            <div class="container">
+                <h2 class="title">案件管理</h2>
+                
+                <!-- step -->
+                <div class="steps Review">
+                    <h4><span>案件進度</span>線上評審</h4>
+                    <ul>
+                        <li class="Pass">
+                            <span></span>
+                            <p>資格初審</p>
+                        </li>
+                        <li class="Now">
+                            <span></span>
+                            <p>線上評審<br><b>2020/5/5 截止</b></p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>複審</p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>結果核定</p>
+                        </li>
+                        <li>
+                            <span></span>
+                            <p>結案</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- filter box -->
+                <!-- 1 -->
+                <div class="filter_box">
+                    <h3 class="title">申請基本資訊</h3>
+                    <section>
+                    <!-- table -->
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>系統號</th>
+                                <td>11101A030</td>
+                                <th>計畫類型</th>
+                                <td>企業加速器</td>
+                                <th>建立日期</th>
+                                <td>2022/04/10 15:33:33</td>
+                            </tr>
+                            <tr>
+                                <th>申請方式</th>
+                                <td>聯盟申請</td>
+                                <th>申請加值</th>
+                                <td>是</td>
+                                <th>申請日期</th>
+                                <td>yyyy/mm/dd hh:mm:ss</td>
+                            </tr>
+                            <tr>
+                                <th>申請者身分</th>
+                                <td>公司</td>
+                                <th>申請者帳號</th>
+                                <td>liucc910｜liucc910hyweb@gmail.com</td>
+                                <th>申請協作</th>
+                                <td>是</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!--Tab-->
+                        <!--Tab-->
+                        <div class="tabSet">
+                            <section class="tabs example-1">
+                                <h2 class="tabItem active"><a href="#">主導單位資訊</a></h2>
+                                <!--選到的頁籤項目 active-->
+                                <div class="tabContent"><!--頁籤一，申請單位資訊，同既有-->
+
+                                    <table class="">
+                                        <caption>主導單位資訊</caption>
+                                        <!--tr>
+                                            <th>系統號</th>
+                                            <td>10901A030</td>
+                                            <th>計畫類型</th>
+                                            <td>在地青年創育坊｜標竿組</td>
+                                        </tr>
+                                        <tr>
+                                            <th>申請方式</th>
+                                            <td>個別申請</td>
+                                            <th>申請特色加值項目</th>
+                                            <td>否</td>
+                                        </tr-->
+                                        <tr>
+                                            <th>計畫名稱</th>
+                                            <td colspan="3">111年度中小企業創育機構發展補助計畫(新增計畫)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>申請單位</th>
+                                            <td>凌網科技</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫主持人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育機構主管</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫聯絡人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>單位地址(寄送公文使用)</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6</td>
+                                        </tr>
+                                        <tr>
+                                            <th>培育空間地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>人力資源</th>
+                                            <td colspan="3">專案經理：<em>1</em> 人｜
+                                                專任助理：<em>1</em> 人｜
+                                                其他專任：<em>1</em> 人｜
+                                                專任人力數：<em>3</em> 人
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育培育空間</th>
+                                            <td colspan="3">總培育空間：<em>10</em> 間<br>
+                                                獨立培育室：<em>3</em> 間｜
+                                                創客空間：<em>3</em> 間｜
+                                                實驗室：<em>4</em> 間
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="">
+                                        <caption>協作單位資訊</caption>
+                                        <tr>
+                                            <th>申請名稱</th>
+                                            <td>凌網科技(協作單位)</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫主持人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育機構主管</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫聯絡人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>單位地址(寄送公文使用)</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6</td>
+                                        </tr>
+                                        <tr>
+                                            <th>培育空間地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>人力資源</th>
+                                            <td colspan="3">專案經理：<em>1</em> 人｜
+                                                專任助理：<em>1</em> 人｜
+                                                其他專任：<em>1</em> 人｜
+                                                專任人力數：<em>3</em> 人
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育培育空間</th>
+                                            <td colspan="3">總培育空間：<em>10</em> 間<br>
+                                                獨立培育室：<em>3</em> 間｜
+                                                創客空間：<em>3</em> 間｜
+                                                實驗室：<em>4</em> 間
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h2 class="tabItem"><a href="#">申請計畫資訊</a></h2>
+                                <div class="tabContent"><!--頁籤二，計畫資訊-->
+                                    <table>
+                                        <tr>
+                                            <th>執行期間</th>
+                                            <td colspan="3"> ~ </td>
+                                        </tr>
+                                        <tr>
+                                            <th>聚焦產業領域</th>
+                                            <td colspan="3">生技醫藥</td>
+                                        </tr>
+                                        <!--轉組與投入設定為在地青年創育坊專屬-->
+                                        <!--tr>
+                                            <th>轉組意願</th>
+                                            <td colspan="3">是</td>
+                                        </tr>
+                                        <tr>
+                                            <th>投入在地縣市</th>
+                                            <td colspan="3">六都：臺北市</td>
+                                        </tr-->
+                                        <tr>
+                                            <th>新增計畫經費</th>
+                                            <td colspan="3">
+                                                <section class="funds">
+                                                    <div>
+                                                        <p><b>政府補(捐)助款：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p class="value">50.00%</p>
+                                                        <p><b>提案申請金額：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p><b>加值項目申請金額：</b></p>
+                                                        <p class="value">0</p>
+                                                    </div>
+                                                    <div>
+                                                        <p><b>自籌款：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p class="value">50.00%</p>
+                                                        <p><b>母組織自籌款：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p><b>企業配合款：</b></p>
+                                                        <p class="value">0</p>
+                                                    </div>
+													<div>
+                                                        <p><b>延續計畫加值補助款：</b></p>
+                                                        <p class="value">2,000,000</p>
+                                                    </div>
+                                                    <div>
+                                                        <p><b>第一年總經費總經費：</b></p>
+                                                        <p class="value">5,000,000</p>
+                                                    </div>
+                                                </section>
+                                            </td>
+                                        </tr>
+                                        <!--tr>
+                                            <th>延續計畫經費</th>
+                                            <td colspan="3">
+                                                <section class="funds">
+                                                    <div>
+                                                        <p><b>政府補(捐)助款：</b></p>
+                                                        <p class="value">2,000,000</p>
+                                                        <p class="value">44.44%</p>
+                                                        <p><b>提案申請金額：</b></p>
+                                                        <p class="value">2,000,000</p>
+                                                        <p><b>加值項目申請金額：</b></p>
+                                                        <p class="value">0</p>
+                                                    </div>
+                                                    <div>
+                                                        <p><b>自籌款：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p class="value">55.56%</p>
+                                                        <p><b>母組織自籌款：</b></p>
+                                                        <p class="value">2,500,000</p>
+                                                        <p><b>企業配合款：</b></p>
+                                                        <p class="value">0</p>
+                                                    </div>
+                                                    <div>
+                                                        <p><b>第二年總經費總經費：</b></p>
+                                                        <p class="value">4,500,000</p>
+                                                    </div>
+                                                </section>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫總經費合計</th>
+                                            <td colspan="3">
+                                                <section class="funds">
+                                                    <div>
+                                                        <p><b>第一年+第二年之計畫總經費合計：</b></p>
+                                                        <p class="value">9,500,000</p>
+                                                    </div>
+                                                </section>
+                                            </td>
+                                        </tr-->
+                                        <tr>
+                                            <th>計畫摘要</th>
+                                            <td colspan="3">
+                                                <textarea name="" id="" cols="30" rows="20" placeholder="" readonly>臺灣第一個以水平式(HUB)整合政府創業資源計畫資訊為主，快速普及至全國，藉此鏈結不同地方創業社群。從中央部會到地方政府、從政府到民間、持續性串流彼此需求與能量，活絡台灣創業生態圈發展。同時辦理創業相關活動，協助從0到1階段創業者起步發展，打造創業第一站，歡迎任何想創業、新創團隊與企業及創業社群來基地交流。
+                                                    文化部（以下簡稱「本部」）為協助設置文化創意聚落，輔導藝文產業核心創作及獨立工作者進駐，透過群聚效益，以促進文化創意事業發展，特訂定「文化部輔導藝文產業創新育成補助作業要點」（以下簡稱「本要點」）。
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div>
+                                    </div>
+                                </div>
+                                <h2 class="tabItem"><a href="#">工作進度表</a></h2>
+                                <div class="tabContent"><!--新增頁籤，依模組顯示指標項目-->
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>新增計畫</th>
+                                                <td colspan="3">
+                                                    <h4 class="">各模組必設指標 (60%)</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>遴選及培育至少24家新創企業：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">24 家</p>
+                                                                <p class="value">8%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">0 家</p>
+                                                                <p class="value">0%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">24 家</p>
+                                                                <p class="value">8%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成所培育之新創企業與申請單位所屬企業集團或集團供應鏈戰略合作，提供發展平台與資源輸入至少5式：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">8 式</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">4 式</p>
+                                                                <p class="value">7.50%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">8 式</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成企業事業部門與培育新創企業共創合作之部門數：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">0 個</p>
+                                                                <p class="value">0%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成企業「事業部門」與培育新創企業共創合作之新創家數：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">8 家</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">4 家</p>
+                                                                <p class="value">7.50%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">8 家</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <h4 class="">自設指標 (40%)</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>自訂指標一：</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>全年預估成果：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>自訂指標二：</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>全年預估成果：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>年度總計：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>合計：</b></p>
+                                                                <p class="value">100.00%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中：</b></p>
+                                                                <p class="value">60.00%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期末：</b></p>
+                                                                <p class="value">100.00%</p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <hr>
+                                                    <h4 class="">其他指標（將列入審查參考，惟不列入基末執行進度查核範籌)）</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業營業額（仟元）</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">1000 仟元</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>專業諮詢次數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 次</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業每年維持就業機會人數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">100 人</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業每年創造就業機會人數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">100 人</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助申請政府資源件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得政府資源件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得政府資源金額（仟元）</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">1000 仟元</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得專利件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助簽訂技轉件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                        </div>
+                                                    </section>
+                                                </td>
+                                            </tr>
+                                            <!--tr>
+                                                <th>延續計畫</th>
+                                                <td colspan="3">
+                                                    <h4 class="">各模組必設指標 (60%)</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>建立1個主題式企業加速器：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">0 個</p>
+                                                                <p class="value">0%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成所培育之新創企業與申請單位所屬企業集團或集團供應鏈戰略合作，提供發展平台與資源輸入至少5式：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">8 式</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">4 式</p>
+                                                                <p class="value">7.50%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">8 式</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成企業事業部門與培育新創企業共創合作之部門數：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">0 個</p>
+                                                                <p class="value">0%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">1 個</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>促成企業「事業部門」與培育新創企業共創合作之新創家數：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>全年預估成果：</b></p>
+                                                                <p class="value">8 家</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">4 家</p>
+                                                                <p class="value">7.50%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中查核點：</b></p>
+                                                                <p class="value">8 家</p>
+                                                                <p class="value">15%</p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <h4 class="">其他自設指標 (40%)</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>自訂指標一：</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>全年預估成果：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>自訂指標二：</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>全年預估成果：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p><b>期中查核點：</b></p>
+                                                                    <p class="value">8 家</p>
+                                                                    <p class="value">12.50%</p>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                        <div>
+                                                            <div class="box">
+                                                                <p><b>年度總計：</b></p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>合計：</b></p>
+                                                                <p class="value">100.00%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期中：</b></p>
+                                                                <p class="value">60.00%</p>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p><b>期末：</b></p>
+                                                                <p class="value">100.00%</p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </td>
+                                            </tr-->
+                                            <tr>
+                                                <th>以PDF檢視／下載</th>
+                                                <td colspan="3">工作進度表：<a href="#" id="openPDF">工作進度表PDF檔</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h2 class="tabItem"><a href="#">創育聯盟(共同執行)</a></h2>
+                                <div class="tabContent"><!--頁籤三，共同執行單位，此頁籤只有申請創育聯盟者會出現-->
+                                    <h4 class="title">共同執行單位#1</h4>
+                                    <table class="">
+                                        <tr>
+                                            <!--聯盟單位擴充身分設定-->
+                                            <th>單位名稱</th>
+                                            <td>聯盟凌網科技</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫主持人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育機構主管</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫聯絡人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>單位地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6</td>
+                                        </tr>
+                                        <tr>
+                                            <th>培育空間地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>人力資源</th>
+                                            <td colspan="3">專案經理：<em>1</em> 人｜
+                                                專任助理：<em>1</em> 人｜
+                                                其他專任：<em>1</em> 人｜
+                                                專任人力數：<em>3</em> 人
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育培育空間</th>
+                                            <td colspan="3">總培育空間：<em>10</em> 間<br>
+                                                獨立培育室：<em>3</em> 間｜
+                                                創客空間：<em>3</em> 間｜
+                                                實驗室：<em>4</em> 間
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <h4 class="title">共同執行單位#2</h4>
+                                    <table class="">
+                                        <tr>
+                                            <!--聯盟單位擴充身分設定-->
+                                            <th>單位名稱</th>
+                                            <td>聯盟2凌網科技</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫主持人</th>
+                                            <td>林大名, 凌凌漆科技, 協理</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育機構主管</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫聯絡人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>單位地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6</td>
+                                        </tr>
+                                        <tr>
+                                            <th>培育空間地址</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>人力資源</th>
+                                            <td colspan="3">專案經理：<em>1</em> 人｜
+                                                專任助理：<em>1</em> 人｜
+                                                其他專任：<em>1</em> 人｜
+                                                專任人力數：<em>3</em> 人
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育培育空間</th>
+                                            <td colspan="3">總培育空間：<em>10</em> 間<br>
+                                                獨立培育室：<em>3</em> 間｜
+                                                創客空間：<em>3</em> 間｜
+                                                實驗室：<em>4</em> 間
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h2 class="tabItem"><a href="#">計畫附件</a></h2>
+                                <div class="tabContent"><!--頁籤四，計畫附件上傳，擴充聯盟獨立上傳附件-->
+                                    <h4 class="title">主導與計畫附件</h4>
+                                    <table>
+                                        <tr>
+                                            <th>計畫申請書(計畫書摘要表+本文)</th>
+                                            <td>
+                                                <a href="#">計畫申請書(計畫書摘要表+本文).pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>公司登記、商業登記等證明文件</th>
+                                            <td>
+                                                <a href="#">公司登記、商業登記.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業所得稅結算申報書</th>
+                                            <td>
+                                                <a href="#">上傳檔名點選另開下載.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業無欠稅證明</th>
+                                            <td>
+                                                <a href="#">計畫申請書本文10頁以內.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營輔導中小企業實績佐證資料</th>
+                                            <td>
+                                                <a href="#">附件檔名.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </table>
+                                    <h4 class="title">協作單位附件</h4>
+                                    <table>
+                                        <tr>
+                                            <th>公司登記、商業登記等證明文件</th>
+                                            <td>
+                                                <a href="#">公司登記、商業登記.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業所得稅結算申報書</th>
+                                            <td>
+                                                <a href="#">上傳檔名點選另開下載.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業無欠稅證明</th>
+                                            <td>
+                                                <a href="#">計畫申請書本文10頁以內.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </table>
+                                    <h4 class="title">共同執行單位#1附件</h4>
+                                    <table>
+                                        <tr>
+                                            <th>公司登記、商業登記等證明文件</th>
+                                            <td>
+                                                <a href="#">公司登記、商業登記.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業所得稅結算申報書</th>
+                                            <td>
+                                                <a href="#">上傳檔名點選另開下載.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業無欠稅證明</th>
+                                            <td>
+                                                <a href="#">計畫申請書本文10頁以內.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </table>
+                                    <h4 class="title">共同執行單位#2附件</h4>
+                                    <table>
+                                        <tr>
+                                            <th>公司登記、商業登記等證明文件</th>
+                                            <td>
+                                                <a href="#">公司登記、商業登記.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業所得稅結算申報書</th>
+                                            <td>
+                                                <a href="#">上傳檔名點選另開下載.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業無欠稅證明</th>
+                                            <td>
+                                                <a href="#">計畫申請書本文10頁以內.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section>
+                    </div>
+                </section>
+                </div>
+                <!-- 2 -->
+                <div class="filter_box">
+                    <h3 class="title">資格審紀錄</h3>
+                    <section>
+                        <table class="">
+                            <tr>
+                                <th>申請年度｜日期</th>
+                                <td>2020｜2020/4/28 16:31</td>
+                                <th>狀態</th>
+                                <td>待書審(已分派)</td>
+                            </tr>
+                            <tr>
+                                <th>初審紀錄</th>
+                                <td colspan="3">
+                                    <ol class="annex">
+                                        <li>
+                                            <span class="date">2020/04/30 11:11</span>
+                                            <span class="user">AdminUser1122</span>
+                                            <span class="status">狀態：通知補件</span>
+                                            <span class="status">補件允許編修：Step1(申請者身分)｜申請計畫資訊｜工作進度表｜附件: 計畫申請書Word, 計畫申請書Pdf</span>
+                                            <span class="note">審核理由：<br>
+                                                補件提醒: (補件聯絡人: 麗雲，電話:02-23316086#7187) <br>
+                                                1.最後補件期間9/28 23:59:59，9/29 0:00:00即會關閉平台。 <br>
+                                                2.不接受mail及紙本補件。 <br>
+                                                3.除補件通知之項目外，其他不得修改。 補件項目: 個資同意:缺陳玉婷,及最後一頁沒有簽名。<br>
+                                                補件項目：<br>
+                                                設立登記:登記資料公司名與申請單位不符<br>
+                                                財務證明：1.最近1年「營利事業所得稅結算申報書」或「營業稅申報書」:營所稅申報書非最近1年<br>
+                                                財務證明：2.最近一期「營利事務無欠稅證明」:有欠稅<br>
+                                                財務證明：3.廠商信用證明文件:無信用證明<br>
+                                                財務證明：4.公司淨值(股東權益)文件:無公司淨值文件<br>
+                                                計畫切結:未用印<br>
+                                                個資同意:缺王小明<br>
+                                                創育聯盟合作協議書:無聯盟合作協議書<br>
+                                                計畫執行期間應為2021/01/01~2022/12/31<br>
+                                                計畫摘要表-共同執行單位-:沒有填寫共同執行單位<br>
+                                                聚焦產業領域:與平台填寫項目不相同，請調整<br> 
+                                                第一年計畫經費(單位:元-記得加 4個 0 ):政府補捐助款 - 總補助金額(A) 與網站金額不符合<br> 
+                                                第一年計畫經費(單位:元-記得加 4個 0 ):加值項目申請金額與網站金額不符合<br> 
+                                                第一年計畫經費(單位:元-記得加 4個 0 ):提案申請金額與網站金額不符合<br> 
+                                                第一年計畫經費(單位:元-記得加 4個 0 ):母組織自籌款(C) 與網站金額不符合<br> 
+                                                第一年計畫經費(單位:元-記得加 4個 0 ):企業配合款(D)與網站金額不符合 
+                                                第一年計畫經費:合計金額(A+B)與網站金額不符合<br> 
+                                                第一年計畫經費:合計金額(A+B)電子檔之合計金額不正確<br> 
+                                                第二年計畫經費:政府補捐助款 - 總補助金額(A)與網站金額不符合<br> 
+                                                第二年計畫經費:提案申請金額與網站金額不符合<br> 
+                                                第二年計畫經費:加值項目申請金額與網站金額不符合<br> 
+                                                第二年計畫經費:母組織自籌款(C)與網站金額不符合<br> 
+                                                第二年計畫經費:企業配合款(D)與網站金額不符合<br> 
+                                                五.創育聯盟計畫分工及權利義務：未付分工表<br> 
+                                                附錄1-計畫人力配置表：未附人力表<br> 
+                                                附錄2-計畫經費預算表：補助款加總數與摘要表補助金額不符<br> 
+                                                附錄4-計畫工作進度表：工作進表未附<br> 
+                                                共同績效指標:1. 當年度培育中小企業家數未填寫<br> 
+                                                共同績效指標:2.至少50%須為新創企業未填寫<br> 
+                                                共同績效指標:3.至少60%須符合所擇定聚焦產業領域未填寫<br> 
+                                                共同績效指標:4.協助當年度培育企業誘發投增資金額(千元)未填寫<br> 
+                                                共同績效指標:5.推薦至少1家培育之新創企業申請進駐林口/沙崙新創園未填寫<br> 
+                                                模組必要績效指標:第2項商圈工作坊未填填 第3項未填寫單位(千元/萬元)<br> 
+                                                附錄5：培育企業亮點案例：未檢附<br> 
+                                                附錄6：109年培育企業輔導及服未檢附<br> 
+                                                附錄9：創育機構相關未檢附<br> 
+                                                補件提醒: (補件聯絡人: 麗雲，電話:02-23316086#7187)<br> 
+                                                1.最後補件期間9/28 23:59:59，9/29 0:00:00即會關閉平台。<br> 
+                                                2.不接受mail及紙本補件。<br> 
+                                                3.除補件通知之項目外，其他不得修改。
+                                        </span>
+                                        </li>
+                                        <li>
+                                            <span class="date">2020/04/30 11:11</span>
+                                            <span class="user">AdminUser1122</span>
+                                            <span class="status">狀態：審核通過</span>
+                                        </li>
+                                        <li>
+                                            <span class="date">2020/04/30 11:11</span>
+                                            <span class="user">AdminUser1122</span>
+                                            <span class="status">狀態：指派評審</span>
+                                            <span class="note">指派評審：A123456789, 林大明；B987654321 黃小明；C000001234 劉中明 | 評審期限：2020/05/5</span>
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <div class="btn_grp">
+                            <input type="button" class="btn btn-primary" value="重新指派評審" id="openModal">
+                            <div class="notice_info">請注意，若重新指派評審則原先評審的評分將不納入計算</div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 調整線上評審結果，增加是否需要繳交複審資料設定 -->
+                <div class="filter_box">
+                    <h3 class="title opened">評審線上評分</h3>
+                    <section>
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <label for="" class="form_title">書審結果</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <label for="username">評審一：A123456789 林大明</label>
+                                        <div class="form_content">
+                                            <div class="form_content form_inline mix-float-col">
+                                                    <div class="form_grp">
+                                                    <label>評分項目小計</label>
+                                                    <input name="" type="text"" value="73" placeholder="0~100" min="0" max="100" readonly><span>分</span>
+                                                    </div><br>
+                                                    <!--div class="form_grp">
+                                                        <label>加分項目(六大核心)</label>
+                                                        <input name="" type="text" value="0" placeholder="0~3" min="0" max="3" readonly><span>分</span>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <label>加分項目(進駐林口/沙崙新創園)</label>
+                                                        <input name="" type="text" value="0" placeholder="0, 2, 5" readonly><span>分</span>
+                                                    </div><br-->
+                                                    <!--依據評審給分撈取呈現-->
+                                                    <div class="form_grp">
+                                                        <label>加分項目(協助在地新增/維持就業人數)</label>
+                                                        <input name="" type="text" value="2" placeholder="0, 2" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助培育企業拓展國際市場(如至國外軟著陸、取得國外訂單等)」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助申請創業家簽證件數」或「協助國外新創企業來臺落地家數」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>取得國際創育機構登錄者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>獲111年企業加速器先行計畫補(捐)助者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自動加總得分</label>
+                                                    <input name="username" type="text" value="75" placeholder="自動加總" readonly><span>分</span>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off" readonly>評審委員審核意見一顯示</textarea>
+                                        <div class="form_grp">
+                                            <label>建議複審方式</label>
+                                            <input type="radio" name="1" value="" checked="" disabled="">實地訪查
+                                            <input type="radio" name="1" value="" disabled="">簡報審查
+                                        </div>
+                                    <div class="form_grp">
+                                        <label for="username">評審二：B987654321 黃小明</label>
+                                        <div class="form_content">
+                                            <div class="form_content form_inline mix-float-col">
+                                                    <div class="form_grp">
+                                                    <label>評分項目小計</label>
+                                                    <input name="" type="text"" value="80" placeholder="0~100" min="0" max="100" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>加分項目(協助在地新增/維持就業人數)</label>
+                                                        <input name="" type="text" value="2" placeholder="0, 2" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助培育企業拓展國際市場(如至國外軟著陸、取得國外訂單等)」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助申請創業家簽證件數」或「協助國外新創企業來臺落地家數」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>取得國際創育機構登錄者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>獲111年企業加速器先行計畫補(捐)助者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自動加總得分</label>
+                                                    <input name="username" type="text" value="82"" placeholder="自動加總" readonly><span>分</span>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off" readonly>評審二的審核意見顯示
+評審二的審核意見顯示(第二行)</textarea>
+                                        <div class="form_grp">
+                                            <label>建議複審方式</label>
+                                            <input type="radio" name="5"" value="" checked="" disabled="">實地訪查
+                                            <input type="radio" name="5" value="" disabled="">簡報審查
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="username">評審三：C000001234 劉中明</label>
+                                        <div class="form_content">
+                                            <div class="form_content form_inline mix-float-col">
+                                                    <div class="form_grp">
+                                                    <label>評分項目小計</label>
+                                                    <input name="" type="text"" value="62" placeholder="0~100" min="0" max="100" readonly><span>分</span>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form_grp">
+                                                        <label>加分項目(協助在地新增/維持就業人數)</label>
+                                                        <input name="" type="text" value="2" placeholder="0, 2" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助培育企業拓展國際市場(如至國外軟著陸、取得國外訂單等)」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自設「協助申請創業家簽證件數」或「協助國外新創企業來臺落地家數」指標給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~3" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>取得國際創育機構登錄者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>獲111年企業加速器先行計畫補(捐)助者給分</label>
+                                                        <input name="" type="text" value="2" placeholder="0~1" readonly><span>分</span>
+                                                    </div><br>
+                                                    <div class="form_grp">
+                                                        <label>自動加總得分</label>
+                                                    <input name="username" type="text" value="64" placeholder="自動加總" readonly><span>分</span>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off" readonly>評審三的審核意見顯示</textarea>
+                                        
+                                        <div class="form_grp">
+                                            <label>建議複審方式</label>
+                                            <input type="radio" name="4"" value="" checked="" disabled="">實地訪查
+                                            <input type="radio" name="4" value="" disabled="">簡報審查
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">書審結果建議(自動)</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <div class="form_content form_inline mix-float-col">
+                                            <div class="form_grp">
+                                                <input name="username" type="text" value="73.67" placeholder="自動計算平均得分，小數點後二位四捨五入" readonly><span>分</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label>是否建議進入複審</label>
+                                                <input name="username" type="text" value="是" placeholder="自動，是否建議進入複審" readonly>
+                                            </div>
+                                            <textarea name="" id="" cols="30" rows="10" autocomplete="off" readonly>評審委員審核意見一顯示
+評審二的審核意見顯示
+評審二的審核意見顯示(第二行)
+評審三的審核意見顯示</textarea>
+                                            <div class="form_grp">
+                                                <label>建議複審方式</label>
+                                                <input type="radio" name="3" value="" checked="" disabled="">實地訪查
+                                                <input type="radio" name="3" value="" disabled="">簡報審查
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">複審核定設定</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off" placeholder="管理端備註"></textarea>
+                                        <div class="form_content form_inline mix-float-col">
+                                            <div class="form_grp">
+                                                <label>複審核定方式</label>
+                                                <input type="radio" name="11" value="">實地訪查
+                                                <input type="radio" name="11" value="" checked="">簡報審查
+                                            </div>
+                                            <div class="form_grp">
+                                                <label>是否需繳交複審資料</label>
+                                                <input type="radio" name="22" value="" checked="">是
+                                                <input type="radio" name="22" value="">否
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">書審核定日期</label>
+                                <div class="form_content"></div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">書審核定帳號</label>
+                                <div class="form_content"></div>
+                            </div>
+                            <!-- btns -->
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-primary" value="書審通過">
+                                <input type="button" class="btn btn-secondary" value="書審不通過">
+                                <div class="notice_info">是否通過複審、備註皆不會顯示在會員端；但設定通過並需繳交資料者，會於繳交期限到期前以Mail通知會員。</div>
+                                <!--修正按鈕名稱-->
+                                <!--input type="button" class="btn btn-primary" value="進入複審" readonly>
+                                <input type="button" class="btn btn-secondary" value="書審不通過" readonly-->
+                            </div>
+
+                        </form>
+                    </section>
+                </div>
+                <!-- 增加一整組複審資料繳交審核 -->
+                <div class="filter_box">
+                    <h3 class="title opened">複審資料審核(預審)</h3>
+                    <section>
+                        <form action="" class="form_grid">
+                            
+                            <h4 class="title">複審(預審)資訊</h4>
+                            <!-- table -->
+                            <table>
+                                <!--增加一列顯示：線上評分是否通過的結果-->
+                                <tr>
+                                    <th>書審結果</th>
+                                    <td colspan="3">審核通過</td>
+                                </tr>
+                                <tr>
+                                        <th>複審核定方式</th>
+                                        <td>簡報審查</td>
+                                        <th>是否需繳交複審資料</th>
+                                        <td>是</td>
+                                    </tr>
+                                    <tr>
+                                        <th>複審上傳資料</th>
+                                        <td colspan="3">
+                                            <a href="#">複審簡報.ppt</a>｜<a href="#">複審簡報_final.pdf</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>複審資料審核紀錄</th>
+                                        <td colspan="3">
+                                            <ol class="annex">
+                                                <li>
+                                                    <span class="date">2022/09/22 22:22</span>
+                                                    <span class="user">AdminUser1122</span>
+                                                    <span class="status">狀態：通知補件</span>
+                                                    <!--span class="note">審核理由：<br>
+                                                        補件提醒: (補件聯絡人: 麗雲，電話:02-23316086#7187) <br>
+                                                        1.最後補件期間9/28 23:59:59，9/29 0:00:00即會關閉平台。 <br>
+                                                        2.不接受mail及紙本補件。 <br>
+                                                        3.除補件通知之項目外，其他不得修改。 補件項目: 個資同意:缺陳玉婷,及最後一頁沒有簽名。
+                                                    </span-->
+                                                </li>
+                                                <li>
+                                                    <span class="date">2022/09/30 11:11</span>
+                                                    <span class="user">AdminUser1122</span>
+                                                    <span class="status">狀態：審核通過(進入複審)</span>
+                                                </li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                            </table>
+                            <h4 class="title">複審審核</h4>    
+                                    <!--div class="form_grp">
+                                        <label for="selectSample" class="form_title">審核意見</label>
+                                        <div class="form_content">
+                                            <textarea name="" id="" cols="30" rows="20" placeholder=""></textarea>
+                                            <div class="notice_info">審核意見將於審核後(補件)以Mail通知</div>
+                                        </div>
+                                    </div-->
+                                    <div class="form_grp">
+                                        <label for="selectSample" class="form_title">內部備註</label>
+                                        <div class="form_content">
+                                            <textarea name="" id="" cols="30" rows="20" placeholder=""></textarea>
+                                            <!--div class="notice_info">此欄位不會顯示於會員端</div-->
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <input type="button" class="btn btn-secondary" value="開放補件">
+                                        <input type="button" class="btn btn-primary" value="審核通過(進入複審)">
+                                        <input type="button" class="btn btn-normal" value="審核不通過">
+                                        <div class="notice_info">內部備註不會顯示於會員端，審核通過者表示複審資料審核通過，方可繼續設定、輸入複審的評分結果</div>
+                                    </div>
+                                
+                            
+                        </form>
+                    </section>
+                </div>
+
+                <!-- 4 -->
+                <div class="filter_box">
+                    <h3 class="title">複審資訊</h3>
+                    <section>
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <legend class="form_title">複審模式</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <label><input type="radio" name="sampleRadio6" value="" checked="">簡報審查</label>
+                                        <label><input type="radio" name="sampleRadio6" value="">實地訪查</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <legend class="form_title">複審辦理資訊</legend>
+                                <div class="form_content form_inline mix-2-col">
+                                    <div class="datepick">
+                                        <input name="" type="date" value="" class="calendar" autocomplete="off">
+                                    </div>
+                                    <input name="" type="text" value="" placeholder="複審辦理地點或簡報地點">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">複審結果</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <label for="username">評審一：</label>
+                                        <input name="username" type="text" value="90" placeholder="">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">評審審核意見顯示</textarea>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="username">評審二：</label>
+                                        <input name="username" type="text" value="90" placeholder="">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">評審審核意見顯示</textarea>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="username">評審三：</label>
+                                        <input name="username" type="text" value="80" placeholder="">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">評審審核意見顯示</textarea>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="username">總共要10組複審評審輸入：</label>
+                                        <input name="username" type="text" value="80" placeholder="">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">評審審核意見顯示</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">複審平均分數</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <div class="form_content form_inline mix-float-col">
+                                            <div class="form_grp">
+                                                <input name="username" type="text" value="87" placeholder="不用自動，手動輸入"><span>分</span>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="username">綜合意見：</label>
+                                            <textarea name="" id="" cols="30" rows="30" autocomplete="off">評審審核意見顯示</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">複審核定日期</label>
+                                <div class="form_content">2020/4/28 16:21</div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">複審核定帳號</label>
+                                <div class="form_content">Admin5566</div>
+                            </div>
+                            <!-- btns -->
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-primary" value="編修儲存">
+                                <input type="button" class="btn btn-normal" value="重設">
+                                <div class="notice_info">複審資訊僅供管理者儲存紀錄，不會顯示於會員端</div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- 5 -->
+                <!--核定資訊的修正皆不可以異動到原申請欄位。只有延續計畫產生時，需帶入核定的資訊-->
+                <div class="filter_box">
+                    <h3 class="title opened">核定資訊管理</h3>
+                    <section>
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <label for="" class="form_title">計畫經費核定(新增計畫 or 延續計畫)</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <!--核定資訊管理僅顯現一年，新增計畫顯示第一年、延續計畫顯示第二年-->
+                                        <div class="form_content mix-4-col">
+                                            <div class="form_grp">
+                                                <label for="username">提案核定金額：</label>
+                                                <input name="username" type="text" value="2,500,000" placeholder="預設帶入當年申請金額"><span>元</span>
+                                            </div>
+                                            <!--加值設為不通過者，加值核定帶入0-->
+                                            <div class="form_grp">
+                                                <label for="username">加值核定金額：</label>
+                                                <input name="username" type="text" value="0" placeholder="預設帶入當年加值金額" disabled><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">自籌款總計：</label>
+                                                <!--自籌款也調整成可調整，但不可影響原來申請的填寫值-->
+                                                <input name="username" type="text"  value="2,500,000" placeholder="預設帶入當年自籌款總計"><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">新增/延續計畫總經費：</label>
+                                                <input name="username" type="text" value="5,000,000" readonly="" placeholder="當年自動加總"><span>元</span>
+                                            </div>
+                                        </div>
+                                        <!--div class="form_content mix-4-col">
+                                            <div class="form_grp">
+                                                <label for="username">提案核定金額：</label>
+                                                <input name="username" type="text" value="2,000,000"><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">加值核定金額：</label>
+                                                <input name="username" type="text" value="1,0000,000" placeholder=""><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">自籌款總計：</label>
+                                                <input name="username" type="text"  value="3,500,000" readonly=""><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">第二年總經費：</label>
+                                                <input name="username" type="text" value="6,000,000" readonly=""><span>元</span>
+                                            </div>
+                                        </div-->
+                                        <!--div class="form_content mix-4-col">
+                                            <div class="form_grp">
+                                                <label for="username">二年總核定金額：</label>
+                                                <input name="username" type="text" value="5,500,000" readonly=""><span>元</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="username">二年總經費：</label>
+                                                <input name="username" type="text" value="11,000,000" readonly=""><span>元</span>
+                                            </div>
+                                        </div-->
+                                   </div>
+                                </div>
+                            </div>
+                            <!--新增單獨核定加值是否通過-->
+                            <div class="form_grp">
+                                <legend class="form_title">加值是否通過</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <label><input type="radio" name="sampleRadio22" value="">是</label>
+                                        <!--原申請加值計畫、預設帶入是，管理者圈選否時，同時將「加值核定金額」設定為0並disabled-->
+                                        <label><input type="radio" name="sampleRadio22" value="" checked="">否</label>
+                                        <!--未申請加值者不出現此項。原有申請加值、但被核定不通過，當延續計畫加值未通過時，隔年申請延續計畫的第一步是否申請加值要改設為否-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <legend class="form_title">書面審查意見</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">帶入書面審查綜合意見</textarea>
+                                    </div>
+                                    <div class="notice_info">書審／複審兩欄的審查意見會在"核定發布"後顯示於會員端。若不要顯示請留空。</div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <legend class="form_title">複審審查意見</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <textarea name="" id="" cols="30" rows="10" autocomplete="off">帶入複審審查意見</textarea>
+                                    </div>
+                                    <div class="notice_info">書審／複審兩欄的審查意見會在"核定發布"後顯示於會員端。若不要顯示請留空。</div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">分數</label>
+                                <div class="form_content">
+                                    <div class="form_grp">
+                                        <div class="form_content form_inline mix-float-col">
+                                            <div class="form_grp">
+                                                <span>書審平均分數</span><input name="username" type="text" value="87" readonly><span>分</span>
+                                            </div>
+                                            <div class="form_grp">
+                                                <span>複審平均分數</span><input name="username" type="text" value="90" readonly><span>分</span>
+                                            </div>
+                                            <!--div class="form_grp">
+                                                <span>調整分數</span><input name="username" type="text" value="+3" readonly>
+                                            </div-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">核定結果</label>
+                                <div class="form_content">
+                                    <select name="" id="" >
+                                        <!--option value="">待核定</option-->
+                                        <option value="">獲補助</option>
+                                        <option value="">未獲補助</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--只有在地青年創育坊的標竿組要出現此項。核定轉組者，隔年延續計畫需變更為轉組後身分，包括對應欄位條件。-->
+                            <div class="form_grp">
+                                <legend class="form_title">創育坊是否核定轉組</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">                                        
+                                        <label><input type="radio" name="sampleRadio9" value="" checked="">是，轉組為新銳組</label>
+                                        <label><input type="radio" name="sampleRadio9" value="">否</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--標竿組不同意轉組者。-->
+                            <div class="form_grp">
+                                <legend class="form_title">創育坊是否核定轉組</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">                                        
+                                        為申請標竿組，但不同意轉組
+                                    </div>
+                                </div>
+                            </div>
+                            <!--新銳組無同意轉組設定。-->
+                            <div class="form_grp">
+                                <legend class="form_title">創育坊是否核定轉組</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">                                        
+                                        為申請新銳組，無須轉組
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <legend class="form_title">申請單位身分變更</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">
+                                        <label><input type="radio" name="sampleRadio9" value="" checked="">公司</label>
+                                        <label><input type="radio" name="sampleRadio9" value="">法人</label>
+                                        <label><input type="radio" name="sampleRadio9" value="">學校</label>
+                                    </div>
+                                </div>
+                                <!--核定變更計畫申請身分者，隔年延續計畫需變更為核定的身分，包括對應欄位條件。-->
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">核定日期</label>
+                                <div class="form_content">2020/4/28 16:21</div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">核定帳號</label>
+                                <div class="form_content">Admin5566</div>
+                            </div>
+                            <!-- btns -->
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-secondary" value="編修暫存">
+                                <input type="button" class="btn btn-primary" value="確認核定發布" onclick="confirm1();alert1();">
+                                <input type="reset" class="btn btn-normal" value="重設">
+
+                                <script>
+                                    function alert1() {
+                                    alert("核定資訊已儲存發布");
+                                    }
+                                    function confirm1() {
+                                    confirm("發布後將無法再變更。若無設定核定日期時間，則將立即發布至會員端。確定要核定發布？");
+                                    }
+                               </script>
+
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <p class="Copyright">© 2020 創育加速卓越服務網</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

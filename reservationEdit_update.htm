@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea.tinymce',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount'
+        ],
+        mobile: { 
+            theme: 'mobile' 
+        },
+        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+        ],
+        });
+    </script>
+    <style>
+        .mce-notification-inner, .mce-notification-warning {visibility: hidden;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>預約管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>預約管理 - 預約單號：2022050810022</h2>
+                        <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
+                        <div class="function">
+                            <ul>
+                                <li ><a href="reservationEdit_contact.htm">聯絡紀錄</a></li>
+                                <li ><a href="reservationEdit_activity.htm">活動資料</a></li>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="flex-12">
+                        <div class="col">
+                            <!-- 中央區塊 -->
+                            <div class="content_block edit_block">
+                                <div class="tabBtn_block">
+                                    <div class="tab_items">
+                                        <button class="btn active"><i class="i_edit"></i>預約訊息</button>
+                                        <button class="btn"><i class="i_setting"></i>合約與追加簽單</button>
+                                        <button class="btn"><i class="i_info"></i>繳費與繳款紀錄</button>
+                                        <button class="btn"><i class="i_clock"></i>滿意度調查</button>
+                                    </div>
+                                </div>
+                                <!--頁籤區-->
+                                <div class="tab__content">
+                                    <!--tabcontent 1 -->
+                                    <div class="active">
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>預約訊息</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                <h4>訂單資訊</h4>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022050810022" class="dynamicCol used" disabled>
+                                                                <label>系統編號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="111080501" disabled>
+                                                                <label>預約編號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="A12345 / 劉佳淇" disabled>
+                                                                <label>承辦人</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="活動名稱" class="dynamicCol used" disabled>
+                                                            <label>活動名稱</label>
+                                                        </div>
+                                                        <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
+                                                            <div class="startDate">
+                                                                <div class="labelEffect">
+                                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" disabled>
+                                                                    <label>活動開始日期</label>
+                                                                </div>
+                                                                <!-- <div class="help">說明文字</div> -->
+                                                            </div>
+                                                            <div class="endDate">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" disabled>
+                                                                    <label>活動結束日期</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="凌網科技股份有限公司" class="dynamicCol used" disabled>
+                                                            <label>承租公司/承租人</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="劉佳淇" class="dynamicCol used" disabled>
+                                                            <label>聯絡人</label>
+                                                            <div class="additional">
+                                                                <select name="" disabled>
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="選項1">先生</option>
+                                                                    <option value="選項2" selected>女士</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="02-00000000#1234" class="dynamicCol used" disabled>
+                                                                <label>連絡電話</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="0900-000000" class="dynamicCol used" disabled>
+                                                                <label>手機</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="02-00000001" class="dynamicCol used" disabled>
+                                                                <label>傳真</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="liucc@hyweb.com.tw" class="dynamicCol used" disabled>
+                                                            <label>聯絡email</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <span style="margin-right:15px;">TWD </span>
+                                                            <input name="" type="text" value="789,567" class="dynamicCol used" disabled>
+                                                            <label>場地費用</label>
+                                                        </div>
+                                                    </div>
+                                                    <!--div class="form_grp" style="margin-top:20px;">
+                                                        <div class="labelEffect">
+                                                            <textarea class="used">本中心提供每間會議室桌椅數量以價目表所列標準容量為限，額外需求或現場追加桌椅費用另計。
+免費提供標準配備：有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個，其它設備依價目表收費。</textarea>
+                                                            <label>租借內容(僅列主要會議室，租借內容詳見合約)</label>
+                                                        </div>
+                                                    </div-->
+                                                <h4>場地資訊</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>預約日期</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="A101" class="dynamicCol used" disabled>
+                                                                <label>預約場地</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_content form_inline" style="margin-top:20px;">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>預約日期</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="A201" class="dynamicCol used" disabled>
+                                                                <label>預約場地</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <hr>
+                                            </div>
+            
+                                        </div>
+                                        
+                                    </div>
+                                    <!--tabcontent 2 -->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>合約與追加簽單</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                    <h4>合約管理</h4>
+                                                        <div class="form_grp form_inline" style="margin-top:20px;">
+                                                            <div class="form_content form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                    <label>回傳期限</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                    <label>合約回傳狀態</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                            <div class="upload_block">
+                                                                <div class="item">
+                                                                    <div class="flex-form">
+                                                                        <div class="form_grp">
+                                                                            <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                            <input name="" type="file">
+                                                                            <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                                <div class="item">
+                                                                    <div class="pic">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-form">
+                                                                        <div class="file_title">上傳已/未用印合約及附件</div>
+                                                                        <div class="form_grp">
+                                                                            <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請更換未用印合約檔案，重新上傳雙方用印合約，前台會員訂單只顯示最新更換的合約檔案。</div>
+                                                        </div>
+                                                        <!--div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="file" value="">
+                                                                <button class="btn btn-icon"><i class="i_edit"></i></button>
+                                                                <label>有按鈕格式icon<abbr>*</abbr></label>
+                                                            </div>
+                                                            <div class="help">說明文字</div>
+                                                        </div-->
+                                                        <hr >
+                                                        <div class="form_grp" style="margin:0 1em;">
+                                                            <h4 class="form_title">合約(客戶用印，客戶端回傳檔案紀錄)：</h4>
+                                                            <ol style="margin-top:2em;">
+                                                                <li><b>最新</b>｜<a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-15 17:33</em></li>
+                                                                <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            </ol>
+                                                        </div>      
+                                                </div>
+                                                <hr>
+                                                <div class="flex-form">
+                                                    <h4>場地及設備追加簽認單管理</h4>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <h4>檔案上傳 <button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button></h4>
+                                                        <div class="upload_block">
+                                                            <!-- item = 1 file -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                    <img src="images/icon/icon_xls.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">附件檔案名稱.xls </div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs"><i class="i_trash"></i>刪除</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- item = 1 file -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">附件檔案名稱.pdf </div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs"><i class="i_trash"></i>刪除</button>
+                                                                            <!--button class="btn btn-icon"><i class="i_copy"></i></button-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr >
+                                                    <div class="form_grp" style="margin:0 1em;">
+                                                        <h4 class="form_title">追加簽認單(客戶用印，客戶端回傳檔案紀錄)：</h4>
+                                                        <ol style="margin-top:2em;">
+                                                            <li><b>最新</b>｜<a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-15 17:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                        </ol>
+                                                    </div>      
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 3-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>繳費與繳款紀錄</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                    <h4>暫收款</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr style="margin-top:20px;">
+                                                <div class="flex-form">
+                                                    <h4>暫收款</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr style="margin-top:20px;">
+                                                <div class="flex-form">
+                                                    <h4>代收網路費</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 4-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>滿意度調查</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="table_wrapper">
+                                                    <table class="table_hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>編號</th>
+                                                                <th>題目</th>
+                                                                <th>結果</th>
+                                                                <th>得分</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>會議室</td>
+                                                                <td>普通</td>
+                                                                <td>2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>視訊音訊</td>
+                                                                <td>滿意</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>空調</td>
+                                                                <td>滿意</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>停車場</td>
+                                                                <td>未使用</td>
+                                                                <td>0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>會議室</td>
+                                                                <td><b style="color:red;">不滿意</b></td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6</td>
+                                                                <td>視訊音訊</td>
+                                                                <td>滿意</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7</td>
+                                                                <td>空調</td>
+                                                                <td>滿意</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>8</td>
+                                                                <td>停車場</td>
+                                                                <td>未使用</td>
+                                                                <td>0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">總計</td>
+                                                                <td><b>25</b> / 48</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="flex-form">
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <textarea class="" disabled>顯示會員意見調查的其他輸入內文</textarea>
+                                                            <label>其他建議</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <h4>附件上傳(完成問卷調查後顯示)</h4>
+                                                <div class="flex-form">
+                                                    <div class="setting_block" style="width:100%;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">附件上傳</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="咖啡券.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>資料狀態</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="" class="used" disabled="disabled">
+                                                    <option value="" disabled="disabled">自動顯示目前訂單狀態</option>
+                                                    <option value="選項1">預定單</option>
+                                                    <option value="選項2" selected="">未繳清</option>
+                                                    <option value="選項3">訂單錯誤</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp" style="margin-top:20px;">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked><span>公開(啟用)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>下架(停用)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <!--button class="btn btn-green">暫存</button>
+                                        <button class="btn">預覽</button-->
+                                        <button class="btn btn-orange">編修儲存</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span>系統管理者(admin)
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ticc.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    
+</body>
+
+</html>
